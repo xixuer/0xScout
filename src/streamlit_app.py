@@ -32,6 +32,17 @@ except ImportError as e:
     st.error(f"核心模块导入失败: {e}。应用无法启动。\n请检查项目结构和依赖项。")
     st.stop()
 
+# --- Helper for Streaming and Capturing ---
+def stream_and_capture(report_generator_call, content_list):
+    """
+    Wraps a generator to capture its yielded string content into a list
+    while still allowing st.write_stream to consume it.
+    """
+    for chunk in report_generator_call:
+        if isinstance(chunk, str):
+            content_list.append(chunk)
+        yield chunk
+
 # --- Constants ---
 CONFIG_PATH = "config.json"
 SUBSCRIPTIONS_PATH = "subscriptions.json"
@@ -526,6 +537,14 @@ def display_report_generation_ui():
     config_data = load_json_file(CONFIG_PATH)
     if not config_data: return
 
+    # Pre-fill session state for temporary LLM settings
+    llm_global_config = config_data.get("llm", {})
+    st.session_state.current_openai_model_name_from_config = llm_global_config.get("openai_model_name", "gpt-4o-mini")
+    st.session_state.current_openai_base_url_from_config = llm_global_config.get("openai_base_url", "https://api.openai.com/v1")
+    st.session_state.current_ollama_model_name_from_config = llm_global_config.get("ollama_model_name", "llama3")
+    st.session_state.current_ollama_api_url_from_config = llm_global_config.get("ollama_api_url", "http://localhost:11434/api/chat")
+    # Note: OpenAI API Key is not pre-filled in temporary settings for security/simplicity.
+
     available_report_types = config_data.get("report_types", [])
     if not available_report_types:
         show_message("warning", "配置文件中未定义任何报告类型 (`report_types`)。")
@@ -535,6 +554,59 @@ def display_report_generation_ui():
         "选择报告类型:", available_report_types, key="report_type_select",
         help="选择您希望生成的报告种类。"
     )
+
+    with st.expander("⚙️ 临时 LLM 设置 (高级)", expanded=False):
+        temp_llm_provider_options = ["使用应用设置中的模型", "openai", "ollama"]
+        # Initialize session state for the selectbox itself if not present
+        if "temp_llm_provider" not in st.session_state:
+            st.session_state.temp_llm_provider = temp_llm_provider_options[0]
+
+        st.selectbox(
+            "LLM 提供商 (本次报告):",
+            options=temp_llm_provider_options,
+            index=temp_llm_provider_options.index(st.session_state.temp_llm_provider), # Use current session state value
+            key="temp_llm_provider", # This key directly updates st.session_state.temp_llm_provider
+            help="选择本次报告使用的LLM提供商。此设置不会保存到全局配置。"
+        )
+
+        if st.session_state.temp_llm_provider == "openai":
+            # Initialize session state for inputs if not present, using pre-filled values
+            if "temp_openai_model_name_input" not in st.session_state:
+                st.session_state.temp_openai_model_name_input = st.session_state.current_openai_model_name_from_config
+            if "temp_openai_base_url_input" not in st.session_state:
+                st.session_state.temp_openai_base_url_input = st.session_state.current_openai_base_url_from_config
+
+            st.text_input(
+                "OpenAI 模型名称 (本次报告):",
+                value=st.session_state.temp_openai_model_name_input, # Use session state value
+                key="temp_openai_model_name_input", # Key updates session state
+                help="例如: gpt-4o-mini, gpt-4o, gpt-3.5-turbo. 此设置仅用于本次报告。"
+            )
+            st.text_input(
+                "OpenAI API Base URL (可选, 本次报告):",
+                value=st.session_state.temp_openai_base_url_input, # Use session state value
+                key="temp_openai_base_url_input", # Key updates session state
+                help="留空则使用官方默认地址。此设置仅用于本次报告。"
+            )
+        elif st.session_state.temp_llm_provider == "ollama":
+            # Initialize session state for inputs if not present, using pre-filled values
+            if "temp_ollama_model_name_input" not in st.session_state:
+                st.session_state.temp_ollama_model_name_input = st.session_state.current_ollama_model_name_from_config
+            if "temp_ollama_api_url_input" not in st.session_state:
+                st.session_state.temp_ollama_api_url_input = st.session_state.current_ollama_api_url_from_config
+
+            st.text_input(
+                "Ollama 模型名称 (本次报告):",
+                value=st.session_state.temp_ollama_model_name_input, # Use session state value
+                key="temp_ollama_model_name_input", # Key updates session state
+                help="例如: llama3, gemma2:2b. 此设置仅用于本次报告。"
+            )
+            st.text_input(
+                "Ollama API URL (本次报告):",
+                value=st.session_state.temp_ollama_api_url_input, # Use session state value
+                key="temp_ollama_api_url_input", # Key updates session state
+                help="此设置仅用于本次报告。"
+            )
 
     generate_report_button = False
     target_repo_input = None
@@ -548,37 +620,65 @@ def display_report_generation_ui():
         )
         if github_report_scope_selection == "指定单个仓库":
             github_report_scope = "single"
-            current_subscriptions = get_subscriptions()
-            subscribed_repo_urls = [
-                sub.get("repo_url") for sub in current_subscriptions.get("github_subscriptions", [])
-                if isinstance(sub, dict) and sub.get("repo_url")
-            ]
-            repo_options = [""] + sorted(list(set(subscribed_repo_urls)))
-            col_manual, col_select = st.columns(2)
-            with col_manual:
-                target_repo_manual_input = st.text_input(
-                    "手动输入 owner/repo:", key="gh_single_repo_manual_text",
-                    help="如果仓库未订阅或想手动指定。"
-                )
-            with col_select:
+            target_repo_input = None # Initialize target_repo_input
+
+            input_method = st.radio(
+                "选择仓库指定方式:",
+                options=["从已订阅列表选择", "手动输入仓库名"],
+                key="gh_single_repo_input_method_radio",
+                horizontal=True
+            )
+
+            if input_method == "从已订阅列表选择":
+                current_subscriptions = get_subscriptions()
+                subscribed_repo_urls = [
+                    sub.get("repo_url") for sub in current_subscriptions.get("github_subscriptions", [])
+                    if isinstance(sub, dict) and sub.get("repo_url")
+                ]
+                # Add empty option for no selection or placeholder
+                repo_options = [""] + sorted(list(set(subscribed_repo_urls)))
                 target_repo_select = st.selectbox(
-                    "或从已订阅仓库中选择:", repo_options, index=0,
-                    key="gh_single_repo_select_box",
+                    "从已订阅仓库中选择:",
+                    repo_options,
+                    index=0, # Default to no selection or first item
+                    key="gh_single_repo_select_conditional",
                     help="从已订阅仓库列表中选择。"
                 )
-            if target_repo_manual_input:
-                normalized_manual_input = normalize_repo_input(target_repo_manual_input)
-                if normalized_manual_input:
-                    target_repo_input = normalized_manual_input
+                if target_repo_select: # Check if a valid repo is selected (not empty string)
+                    target_repo_input = target_repo_select
+                # If target_repo_select is "" (empty string), target_repo_input remains None or its previous state.
+                # Explicitly setting to None if empty helps clarify state.
                 else:
-                    show_message("error", "手动输入的仓库格式不正确。请使用 'owner/repo'。")
-            elif target_repo_select:
-                target_repo_input = target_repo_select
+                    target_repo_input = None
+
+            elif input_method == "手动输入仓库名":
+                target_repo_manual_input = st.text_input(
+                    "手动输入 owner/repo 或 GitHub URL:", # Updated help text to be more inclusive
+                    key="gh_single_repo_manual_conditional",
+                    help="输入仓库的 owner/repo 格式或完整的 GitHub URL。"
+                )
+                if target_repo_manual_input:
+                    normalized_manual_input = normalize_repo_input(target_repo_manual_input)
+                    if normalized_manual_input:
+                        target_repo_input = normalized_manual_input
+                    else:
+                        # Display error directly under the input field for better UX
+                        st.error("手动输入的仓库格式不正确。请使用 'owner/repo' 或 GitHub URL。")
+                        target_repo_input = None # Ensure it's None if normalization fails
+                else:
+                    target_repo_input = None # Ensure it's None if input is empty
+
+            # Button display logic based on target_repo_input being successfully set
             if target_repo_input:
                 generate_report_button = st.button(f"为 {target_repo_input} 生成GitHub报告", key="generate_single_gh_report_btn")
             else:
-                show_message("info", "请为 '指定单个仓库' 提供一个仓库（手动输入或从列表选择）。")
-        else:
+                # Provide clearer guidance based on the selected input method or if no input yet.
+                if input_method == "从已订阅列表选择":
+                    show_message("info", "请从列表中选择一个已订阅的仓库。")
+                elif input_method == "手动输入仓库名":
+                    show_message("info", "请输入有效的仓库名称或URL。")
+                # else case for initial state before any interaction might not be strictly needed if radio defaults.
+        else: # This is for "所有已订阅仓库"
             github_report_scope = "all"
             generate_report_button = st.button("为所有已订阅仓库生成GitHub报告", key="generate_all_gh_report_btn")
     elif report_type == "hacker_news_hours_topic":
@@ -589,8 +689,27 @@ def display_report_generation_ui():
         show_message("warning", f"暂不支持 '{report_type}' 类型的报告生成UI。")
 
     if generate_report_button:
+        full_report_content = [] # Initialize accumulator for the report
+        report_type_prefix = report_type # Default prefix
+
         try:
-            settings = Settings(config_file=CONFIG_PATH)
+            report_settings_override = {}
+            if st.session_state.temp_llm_provider == "openai":
+                report_settings_override['llm'] = {
+                    "model_type": "openai",
+                    "openai_model_name": st.session_state.temp_openai_model_name_input,
+                    "openai_base_url": st.session_state.temp_openai_base_url_input if st.session_state.temp_openai_base_url_input else st.session_state.current_openai_base_url_from_config, # Default to global config's value if temp is empty
+                    "openai_api_key": config_data.get("llm", {}).get("openai_api_key", "") # Load from global
+                }
+            elif st.session_state.temp_llm_provider == "ollama":
+                report_settings_override['llm'] = {
+                    "model_type": "ollama",
+                    "ollama_model_name": st.session_state.temp_ollama_model_name_input,
+                    "ollama_api_url": st.session_state.temp_ollama_api_url_input
+                }
+            # Else: "使用应用设置中的模型", report_settings_override remains empty, Settings loads from file.
+
+            settings = Settings(config_file=CONFIG_PATH, overrides=report_settings_override if report_settings_override else None)
             llm_instance = LLM(settings=settings)
             github_token = config_data.get("github", {}).get("token")
             if not github_token and report_type == "github":
@@ -608,135 +727,142 @@ def display_report_generation_ui():
 
         # Logic for st.write_stream
         if report_type == "github" and github_report_scope == "all":
+            report_type_prefix = "github_subscriptions_report"
             with st.spinner("⏳ 正在为所有已订阅仓库生成GitHub报告..."):
                 main_report_iter = iter(report_generator.generate_github_subscription_report())
-
                 overall_title = next(main_report_iter, None)
+
                 if overall_title and isinstance(overall_title, str):
-                    # Check if it's an info/error message first
                     if overall_title.startswith("没有配置 GitHub 仓库订阅") or \
                        overall_title.startswith("所有订阅条目均未能成功解析为有效的仓库"):
                         st.info(overall_title)
-                        # No further processing needed if it's just an info message
+                        full_report_content.append(overall_title + "\n")
                     else:
-                        st.markdown(overall_title) # Display the main title
-                        # Now iterate through the project-specific generators
+                        st.markdown(overall_title)
+                        full_report_content.append(overall_title + "\n")
                         for single_project_generator in main_report_iter:
                             project_specific_iter = iter(single_project_generator)
                             left_col, right_col = st.columns(2)
-                            factual_data_chunk = None # Initialize for current project
-                            separator_chunk = None  # Initialize for current project
+                            factual_data_chunk, separator_chunk = None, None
                             try:
                                 factual_data_chunk = next(project_specific_iter, None)
                                 if factual_data_chunk:
                                     with left_col:
                                         st.markdown("---")
-                                        # Factual data already contains its own "## owner/repo ..." title from _generate_github_project_basic_info_markdown
                                         st.markdown(factual_data_chunk)
+                                    full_report_content.append("\n---\n" + factual_data_chunk + "\n")
                                 else:
                                     with left_col: st.warning("未能获取项目的原始数据部分。")
 
                                 separator_chunk = next(project_specific_iter, None)
                                 if separator_chunk:
                                     with right_col:
-                                        st.markdown("---") # Added for visual consistency
+                                        st.markdown("---")
                                         st.markdown(separator_chunk)
-                                        # Check if it's the actual LLM summary header or a skip notice
-                                        if "LLM 智能摘要" in separator_chunk or "AI Summary" in separator_chunk:
-                                            st.write_stream(project_specific_iter)
-                                        # If it's a skip notice like "LLM摘要已跳过", it's already displayed by the markdown above.
-                                else: # No separator/notice, means LLM part was skipped or something unexpected.
-                                     with right_col: st.info("LLM摘要部分未生成或无内容。")
-
+                                    full_report_content.append("\n---\n" + separator_chunk + "\n")
+                                    if "LLM 智能摘要" in separator_chunk or "AI Summary" in separator_chunk:
+                                        st.write_stream(stream_and_capture(project_specific_iter, full_report_content))
+                                else:
+                                    with right_col: st.info("LLM摘要部分未生成或无内容。")
+                                    full_report_content.append("LLM摘要部分未生成或无内容。\n")
                             except StopIteration:
-                                # This means the single_project_generator ended.
-                                # This can happen if only factual data was yielded (LLM skipped with no notice chunk)
-                                if factual_data_chunk and not separator_chunk:
-                                     with right_col: st.info("LLM摘要部分未生成或无内容。")
-                                elif not factual_data_chunk: # Should be caught by earlier check but as a safeguard
+                                if factual_data_chunk and not separator_chunk: # LLM part fully skipped
+                                    with right_col: st.info("LLM摘要部分未生成或无内容。")
+                                    full_report_content.append("LLM摘要部分未生成或无内容。\n")
+                                elif not factual_data_chunk:
                                      st.warning("一个项目报告生成器未产生预期的数据。")
                             except Exception as e_proj_stream:
                                 st.error(f"处理单个项目报告流时出错: {e_proj_stream}")
-                                st.code(traceback.format_exc())
-                            st.divider() # Visual separator between project reports
-                elif overall_title is None: # Should not happen if generator is well-behaved
+                            st.divider()
+                            full_report_content.append("\n---\n") # Visual separator in Markdown
+                elif overall_title is None:
                      st.warning("报告生成器未能初始化或未产生任何内容。")
-
             show_message("success", "GitHub 订阅报告流程处理完毕。")
 
         elif report_type == "github" and github_report_scope == "single" and target_repo_input:
+            report_type_prefix = f"github_report_{target_repo_input.replace('/', '_')}"
             try:
                 owner, repo_name = target_repo_input.split('/')
                 with st.spinner(f"⏳ 正在为 {target_repo_input} 生成GitHub报告..."):
                     left_column, right_column = st.columns(2)
-                    report_stream = report_generator.generate_github_project_report(owner=owner, repo_name=repo_name)
-                    factual_data_chunk = None
-                    separator_chunk = None
+                    report_stream_gen = report_generator.generate_github_project_report(owner=owner, repo_name=repo_name)
+                    factual_data_chunk, separator_chunk = None, None
                     try:
-                        factual_data_chunk = next(report_stream)
+                        factual_data_chunk = next(report_stream_gen)
                         with left_column:
-                            st.markdown("---") # Added for visual consistency
+                            st.markdown("---")
                             st.markdown("### 📝 原始数据 (Factual Data)")
                             st.markdown(factual_data_chunk)
+                        full_report_content.append("---\n### 📝 原始数据 (Factual Data)\n" + factual_data_chunk + "\n")
 
-                        separator_chunk = next(report_stream)
+                        separator_chunk = next(report_stream_gen)
                         with right_column:
-                            st.markdown(separator_chunk) # Display the rich separator
-                            st.write_stream(report_stream) # Stream remaining LLM parts
-
+                            st.markdown(separator_chunk)
+                        full_report_content.append(separator_chunk + "\n")
+                        st.write_stream(stream_and_capture(report_stream_gen, full_report_content))
                     except StopIteration:
-                        with left_column: # Ensure message appears in a column
+                        with left_column:
                             if factual_data_chunk is not None and separator_chunk is None:
-                                # Factual data yielded, LLM part skipped.
-                                # Factual data is already in left_column.
-                                with right_column: # Display message in right column
-                                    st.info("LLM摘要未生成（可能由于配置或无适用内容）。")
+                                with right_column: st.info("LLM摘要未生成（可能由于配置或无适用内容）。")
+                                full_report_content.append("LLM摘要未生成（可能由于配置或无适用内容）。\n")
                             elif factual_data_chunk is None:
                                 st.warning("报告生成器未产生任何内容。")
                     except Exception as e_stream_consume:
                         st.error(f"处理报告流时发生错误: {e_stream_consume}")
-                        st.code(traceback.format_exc())
                 show_message("success", f"GitHub 项目 {target_repo_input} 报告流程处理完毕。")
             except ValueError:
                 st.error(f"仓库格式不正确: {target_repo_input}。请使用 'owner/repo' 格式。")
             except Exception as e_gh_single:
                 st.error(f"为 {target_repo_input} 生成GitHub报告时出错: {e_gh_single}")
-                st.code(traceback.format_exc())
 
         elif report_type == "hacker_news_hours_topic":
+            report_type_prefix = "hn_hourly_report"
             with st.spinner("⏳ 正在生成Hacker News小时热门话题报告..."):
                 try:
-                    hn_client = HackerNewsClient()
-                    markdown_file_path = hn_client.export_top_stories()
+                    hn_client = HackerNewsClient() # Should this be initialized earlier?
+                    markdown_file_path = hn_client.export_top_stories() # This seems to be a file path, not the report content itself.
                     if markdown_file_path is None:
                         st.error("错误: 未能获取Hacker News数据文件路径。")
+                        full_report_content.append("错误: 未能获取Hacker News数据文件路径。\n")
                     else:
                         fn = os.path.basename(markdown_file_path)
                         hour_str = os.path.splitext(fn)[0]
                         date_str = os.path.basename(os.path.dirname(markdown_file_path))
                         if not (hour_str.isdigit() and len(date_str.split('-')) == 3):
                             st.error(f"错误: 无法从路径 {markdown_file_path} 解析日期/小时。")
+                            full_report_content.append(f"错误: 无法从路径 {markdown_file_path} 解析日期/小时。\n")
                         else:
-                            st.write_stream(report_generator.get_hacker_news_hourly_report(date_str, hour_str))
+                            report_type_prefix = f"hn_hourly_{date_str}_{hour_str}"
+                            st.write_stream(stream_and_capture(report_generator.get_hacker_news_hourly_report(date_str, hour_str), full_report_content))
                             show_message("success", "Hacker News 小时热门话题报告流程处理完毕。")
                 except Exception as e_hn_hourly:
                     st.error(f"生成Hacker News小时报告时出错: {e_hn_hourly}")
-                    st.code(traceback.format_exc())
+                    full_report_content.append(f"生成Hacker News小时报告时出错: {e_hn_hourly}\n")
 
         elif report_type == "hacker_news_daily_report":
+            report_type_prefix = "hn_daily_summary"
             with st.spinner("⏳ 正在生成Hacker News每日摘要报告..."):
                 try:
                     current_date_str = datetime.now().strftime('%Y-%m-%d')
-                    st.write_stream(report_generator.get_hacker_news_daily_summary(current_date_str))
+                    report_type_prefix = f"hn_daily_summary_{current_date_str}"
+                    st.write_stream(stream_and_capture(report_generator.get_hacker_news_daily_summary(current_date_str), full_report_content))
                     show_message("success", "Hacker News 每日摘要报告流程处理完毕。")
                 except Exception as e_hn_daily:
                     st.error(f"生成Hacker News每日报告时出错: {e_hn_daily}")
-                    st.code(traceback.format_exc())
+                    full_report_content.append(f"生成Hacker News每日报告时出错: {e_hn_daily}\n")
         else:
             if report_type == "github" and github_report_scope == "single" and not target_repo_input:
                 show_message("info", "请为 '指定单个仓库' 提供一个仓库（手动输入或从列表选择）。")
-            # else: # Other unhandled cases, though UI should prevent most.
-                # show_message("warning", "选择的报告类型或范围无法处理。")
+
+        # Add download button if content was generated
+        final_markdown_report = "".join(full_report_content)
+        if final_markdown_report.strip():
+            st.download_button(
+                label="📥 Download Report (Markdown)",
+                data=final_markdown_report.encode('utf-8'),
+                file_name=f"{report_type_prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md",
+                mime="text/markdown"
+            )
 
     # Remove or comment out the old display logic
     # st.markdown("---")
