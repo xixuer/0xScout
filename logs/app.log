@@ -1,0 +1,566 @@
+2025-06-05 16:13:01 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:13:01 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:13:01 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:13:01 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:13:01 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:13:01 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:13:01 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:13:01 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:13:01 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:13:01 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:13:01 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:13:01 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:13:01 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:13:01 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:01 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:01 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:01 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:13:01 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:269 - 使用提示生成 HN 小时主题报告: 'Please summarize the following content:...'
+2025-06-05 16:13:01 | ERROR | llm:_generate_report_openai:148 - OpenAI 客户端未初始化。请检查 API Key 和 Base URL 配置。
+2025-06-05 16:13:01 | INFO | report_generator:generate_hacker_news_hours_topic_report:276 - Hacker News 小时主题报告已生成。
+2025-06-05 16:13:06 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:13:06 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:13:06 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:13:06 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:13:06 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:13:06 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:13:06 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:13:06 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:13:06 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:13:06 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:13:06 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:13:06 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:13:06 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:13:06 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:06 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:06 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:06 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:13:06 | DEBUG | report_generator:generate_hacker_news_daily_report:288 - 使用提示生成 HN 每日摘要报告: 'Please summarize the following content:...'
+2025-06-05 16:13:06 | ERROR | llm:_generate_report_openai:148 - OpenAI 客户端未初始化。请检查 API Key 和 Base URL 配置。
+2025-06-05 16:13:06 | INFO | report_generator:generate_hacker_news_daily_report:295 - Hacker News 每日摘要报告已生成。
+2025-06-05 16:13:13 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:13:13 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:13:13 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:13:13 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:13:13 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:13:13 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:13:13 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:13:13 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:13:13 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:13:13 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:13:13 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:13:13 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:13:13 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:13:13 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:13 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:13 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:13:13 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:13:13 | INFO | report_generator:generate_github_project_report:161 - 准备为 songquanpeng/one-api 生成项目报告 (过去 1 天)...
+2025-06-05 16:13:13 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T08:13:13.548402+00:00 (1 days)
+2025-06-05 16:13:13 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 16:13:14 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 16:13:15 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 16:13:16 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:13:17 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 16:13:17 | DEBUG | report_generator:generate_github_project_report:170 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-05 16:13:17 | ERROR | llm:_generate_report_openai:148 - OpenAI 客户端未初始化。请检查 API Key 和 Base URL 配置。
+2025-06-05 16:15:04 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:15:04 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:15:04 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:15:04 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:15:04 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:15:04 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:15:04 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:15:04 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:15:04 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:15:04 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:15:04 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:15:04 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:15:04 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:15:04 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:04 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:04 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:04 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:15:04 | INFO | report_generator:generate_github_project_report:161 - 准备为 songquanpeng/one-api 生成项目报告 (过去 1 天)...
+2025-06-05 16:15:05 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T08:15:05.000688+00:00 (1 days)
+2025-06-05 16:15:05 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 16:15:05 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 16:15:06 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 16:15:08 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:15:09 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 16:15:09 | DEBUG | report_generator:generate_github_project_report:170 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-05 16:15:09 | ERROR | llm:_generate_report_openai:148 - OpenAI 客户端未初始化。请检查 API Key 和 Base URL 配置。
+2025-06-05 16:15:14 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:15:14 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:15:14 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:15:14 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:15:14 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:15:14 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:15:14 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:15:14 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:15:14 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:15:14 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:15:14 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:15:14 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:15:14 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:15:14 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:14 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:14 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:14 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:15:14 | INFO | report_generator:generate_github_subscription_report:215 - 准备生成 GitHub 订阅总报告...
+2025-06-05 16:15:14 | WARNING | report_generator:generate_github_subscription_report:232 - 订阅条目格式不正确（缺少 owner 或 repo_name），跳过: {'repo_url': 'songquanpeng/one-api', 'last_processed_timestamp': None, 'custom_branch': None}
+2025-06-05 16:15:14 | INFO | report_generator:generate_github_subscription_report:256 - LLM 提示 (e.g., github_digest) 或 LLM 实例未完全配置，返回组合数据报告。
+2025-06-05 16:15:22 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:15:22 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:15:22 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:15:22 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:15:22 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:15:22 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:15:22 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:15:22 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:15:22 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:15:22 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:15:22 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:15:22 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:15:22 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:15:22 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:22 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:22 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:15:22 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:15:22 | INFO | report_generator:generate_github_project_report:161 - 准备为 xixuer/GitHubSentinel 生成项目报告 (过去 1 天)...
+2025-06-05 16:15:22 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for xixuer/GitHubSentinel since 2025-06-04T08:15:22.109741+00:00 (1 days)
+2025-06-05 16:15:22 | DEBUG | github_client:fetch_commits:24 - 准备获取 xixuer/GitHubSentinel 的 Commits
+2025-06-05 16:15:23 | DEBUG | github_client:fetch_issues:46 - 准备获取 xixuer/GitHubSentinel 的 Issues。
+2025-06-05 16:15:23 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 xixuer/GitHubSentinel 的 Pull Requests。
+2025-06-05 16:15:24 | DEBUG | github_client:get_recent_releases:94 - 准备获取 xixuer/GitHubSentinel 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:15:25 | INFO | github_client:get_recent_releases:119 - xixuer/GitHubSentinel 没有找到任何 Releases。
+2025-06-05 16:15:25 | DEBUG | report_generator:generate_github_project_report:170 - 使用 LLM 为 xixuer/GitHubSentinel 生成摘要报告。
+2025-06-05 16:15:25 | ERROR | llm:_generate_report_openai:148 - OpenAI 客户端未初始化。请检查 API Key 和 Base URL 配置。
+2025-06-05 16:20:19 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:20:19 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:20:19 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:20:19 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:20:19 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:20:19 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:20:19 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:20:19 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:20:19 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:20:19 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:20:19 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:20:19 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:20:19 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:20:19 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:20:19 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:20:19 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:20:19 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:20:19 | INFO | report_generator:generate_github_subscription_report:215 - 准备生成 GitHub 订阅总报告...
+2025-06-05 16:20:19 | WARNING | report_generator:generate_github_subscription_report:232 - 订阅条目格式不正确（缺少 owner 或 repo_name），跳过: {'repo_url': 'songquanpeng/one-api', 'last_processed_timestamp': None, 'custom_branch': None}
+2025-06-05 16:20:19 | INFO | report_generator:generate_github_subscription_report:256 - LLM 提示 (e.g., github_digest) 或 LLM 实例未完全配置，返回组合数据报告。
+2025-06-05 16:20:28 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:20:28 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:20:28 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:20:28 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:20:28 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:20:28 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:20:28 | ERROR | llm:__init__:67 - 创建自定义 httpx.Client 时发生错误: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-06-05 16:20:28 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1'}
+2025-06-05 16:20:28 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:20:28 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:20:28 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:20:28 | ERROR | llm:__init__:98 - OpenAI 客户端初始化时捕获到异常。类型: TypeError, 消息: Client.__init__() got an unexpected keyword argument 'proxies'. 参数详情已记录到日志上下文。
+2025-06-05 16:20:28 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:20:28 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:20:28 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:20:28 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:20:28 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:20:28 | INFO | report_generator:generate_github_project_report:161 - 准备为 songquanpeng/one-api 生成项目报告 (过去 1 天)...
+2025-06-05 16:20:28 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T08:20:28.264913+00:00 (1 days)
+2025-06-05 16:20:28 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 16:20:29 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 16:20:29 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 16:20:30 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:20:31 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 16:20:31 | DEBUG | report_generator:generate_github_project_report:170 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-05 16:20:31 | ERROR | llm:_generate_report_openai:148 - OpenAI 客户端未初始化。请检查 API Key 和 Base URL 配置。
+2025-06-05 16:24:46 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:24:46 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'ollama'
+2025-06-05 16:24:46 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'ollama'
+2025-06-05 16:24:46 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('ollama') for client setup.
+2025-06-05 16:24:46 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:24:46 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:24:46 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:24:46 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:24:46 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:24:46 | INFO | report_generator:generate_github_subscription_report:215 - 准备生成 GitHub 订阅总报告...
+2025-06-05 16:25:52 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:25:52 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:25:52 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:25:52 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:25:52 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:25:52 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:25:52 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:25:52 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:25:52 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:25:52 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:25:52 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:25:52 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:25:52 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:25:52 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:25:52 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:25:52 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:25:52 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:25:52 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:25:52 | INFO | report_generator:generate_github_project_report:161 - 准备为 songquanpeng/one-api 生成项目报告 (过去 1 天)...
+2025-06-05 16:25:52 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T08:25:52.642450+00:00 (1 days)
+2025-06-05 16:25:52 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 16:25:53 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 16:25:54 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 16:25:55 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:25:57 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 16:25:57 | DEBUG | report_generator:generate_github_project_report:170 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-05 16:25:57 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 16:26:12 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='ecbb9817-3dd0-440e-9b45-acdd029f7b4a', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='## one-api 项目每日更新摘要\n\n### 📌 今日动态\n- **代码提交**: 过去24小时内没有新的commits\n- **问题处理**: 没有新关闭的issues\n- **版本发布**: 近期没有新发布的版本\n\n### 🔧 合并的PR (共10个)\n主要功能改进和修复包括：\n1. 新增日志级别过滤功能 (#2276)\n2. 添加ARM64平台支持 (#2216) \n3. 请求头增加额外header支持 (#2204)\n4. 修复火山方舟API响应格式问题 (#2114)\n5. 新增PPIO作为模型供应商 (#2090)\n6. 更新阿里云和OpenRouter的模型及定价 (#2086, #2084)\n7. 添加ModelRatio和GroupRatio的读写锁防止并发问题 (#2067)\n\n其他PR为常规维护或已关闭状态。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749111957, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=189, prompt_tokens=524, total_tokens=713, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=524))
+2025-06-05 16:26:26 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:26:26 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:26:26 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:26:26 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:26:26 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:26:26 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:26:26 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:26:26 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:26:26 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:26:26 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:26:26 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:26:26 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:26:26 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:26:26 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:26:26 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:26:26 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:26:26 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:26:26 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:26:26 | INFO | report_generator:generate_github_subscription_report:215 - 准备生成 GitHub 订阅总报告...
+2025-06-05 16:26:26 | WARNING | report_generator:generate_github_subscription_report:232 - 订阅条目格式不正确（缺少 owner 或 repo_name），跳过: {'repo_url': 'songquanpeng/one-api', 'last_processed_timestamp': None, 'custom_branch': None}
+2025-06-05 16:26:26 | INFO | report_generator:generate_github_subscription_report:256 - LLM 提示 (e.g., github_digest) 或 LLM 实例未完全配置，返回组合数据报告。
+2025-06-05 16:26:35 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:26:35 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:26:35 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:26:35 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:26:35 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:26:35 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:26:35 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:26:35 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:26:35 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:26:35 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:26:35 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:26:35 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:26:35 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:26:35 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:26:35 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:26:35 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:26:35 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:26:35 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:26:35 | INFO | report_generator:generate_github_project_report:161 - 准备为 songquanpeng/one-api 生成项目报告 (过去 1 天)...
+2025-06-05 16:26:35 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T08:26:35.389832+00:00 (1 days)
+2025-06-05 16:26:35 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 16:26:36 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 16:26:36 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 16:26:38 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:26:39 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 16:26:39 | DEBUG | report_generator:generate_github_project_report:170 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-05 16:26:39 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 16:26:53 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='640f5834-41a3-4277-900c-d93708a1a4a5', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='## one-api 项目每日摘要 (过去24小时)\n\n### 主要动态：\n- 无新提交的代码\n- 无新关闭的Issue\n\n### 合并/关闭的PR：\n共处理了9个Pull Request，主要涉及：\n1. 功能新增：支持日志级别过滤 (#2276)、添加PPIO作为模型供应商 (#2090)、请求头扩展 (#2204)\n2. 问题修复：ARM64平台支持 (#2216)、并发问题修复 (#2067)、火山方舟响应格式修复 (#2114)\n3. 模型更新：阿里模型及价格更新 (#2086)、OpenRouter模型及价格更新 (#2084)\n\n### 版本发布：\n- 近期无新版本发布\n\n注：所有数字编号（如#2276）均为GitHub上对应PR的链接，可直接点击查看详情。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749111999, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=177, prompt_tokens=524, total_tokens=701, prompt_tokens_details={'cached_tokens': 512}, prompt_cache_hit_tokens=512, prompt_cache_miss_tokens=12))
+2025-06-05 16:27:21 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:27:21 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:27:21 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:27:21 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:27:21 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:27:21 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:27:21 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:27:21 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:27:21 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:27:21 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:27:21 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:27:21 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:27:21 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:27:21 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:27:21 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:27:21 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:27:21 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:27:21 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:27:21 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:269 - 使用提示生成 HN 小时主题报告: 'Please summarize the following content:...'
+2025-06-05 16:27:21 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 16:27:36 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='74c1f127-56d8-4fb5-bfe3-3d194818f4da', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于您没有提供具体的Hacker News小时数据内容，我无法生成准确的摘要。不过，通常Hacker News小时数据可能包含以下内容：\n\n1. **热门技术新闻/链接** - 过去一小时内讨论度最高的技术文章、项目或公告\n2. **评论趋势** - 用户正在热议的特定话题或技术争议\n3. **新发布内容** - 最新提交的Show HN（项目展示）、Ask HN（技术问答）等\n4. **投票排名变化** - 哪些内容的投票数在快速上升\n\n如果您能提供具体的数据样本（如标题、链接、投票数等），我可以为您生成更精确的摘要。例如：\n"过去一小时最热门的是关于Rust 2.0预发布的讨论（382票），其次是AI代码生成工具对比分析（251票），新发布的‘HN阅读器开源项目’获得快速关注..."\n\n请补充数据细节以便我提供更有价值的摘要。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749112041, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=197, prompt_tokens=19, total_tokens=216, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=19))
+2025-06-05 16:27:36 | INFO | report_generator:generate_hacker_news_hours_topic_report:276 - Hacker News 小时主题报告已生成。
+2025-06-05 16:27:48 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:27:48 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:27:48 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:27:48 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:27:48 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:27:48 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:27:48 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:27:48 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:27:48 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:27:48 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:27:48 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:27:48 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:27:48 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:27:48 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:27:48 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:27:48 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:27:48 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:27:48 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:27:48 | DEBUG | report_generator:generate_hacker_news_daily_report:288 - 使用提示生成 HN 每日摘要报告: 'Please summarize the following content:...'
+2025-06-05 16:27:48 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 16:28:05 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='59fa998d-b485-4b78-9517-0d112ba53c1e', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于目前没有提供具体的Hacker News每日聚合数据内容，我无法生成准确的摘要。如果您能提供以下任意信息，我可以为您整理摘要：\n\n1. 当日热门讨论的技术话题/新闻标题\n2. 最受关注的3-5条帖子及其简要内容\n3. 特定日期的数据请求（需说明日期范围）\n\n典型摘要结构示例：\n---\n【Hacker News每日精选】  \n🔥 热门话题：  \n- 讨论度最高的技术（如"Rust 2.0提案引发社区热议"）  \n- 突发科技新闻（如"OpenAI发布新文本生成模型"）  \n\n💡 深度讨论：  \n- 某开源项目更新（含关键改进说明）  \n- 程序员经验分享（如"分布式系统调试技巧"）  \n\n🆕 新工具推荐：  \n- 当日发布的实用开发工具（名称+核心功能）  \n\n（根据实际数据可增减模块）  \n\n请提供具体内容后，我将为您生成定制化摘要。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749112068, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=212, prompt_tokens=20, total_tokens=232, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=20))
+2025-06-05 16:28:05 | INFO | report_generator:generate_hacker_news_daily_report:295 - Hacker News 每日摘要报告已生成。
+2025-06-05 16:29:39 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:29:39 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:29:39 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:29:39 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:29:39 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:29:39 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:29:39 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:29:39 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:29:39 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:29:39 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:29:39 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:29:39 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:29:39 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:29:39 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:29:39 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:29:39 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:29:39 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:29:39 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:29:39 | INFO | report_generator:generate_github_subscription_report:215 - 准备生成 GitHub 订阅总报告...
+2025-06-05 16:29:39 | WARNING | report_generator:generate_github_subscription_report:232 - 订阅条目格式不正确（缺少 owner 或 repo_name），跳过: {'repo_url': 'songquanpeng/one-api', 'last_processed_timestamp': None, 'custom_branch': None}
+2025-06-05 16:29:39 | INFO | report_generator:generate_github_subscription_report:256 - LLM 提示 (e.g., github_digest) 或 LLM 实例未完全配置，返回组合数据报告。
+2025-06-05 16:38:44 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:38:44 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:38:44 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:38:44 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:38:44 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:38:44 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:38:45 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:38:45 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:38:45 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:38:45 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:38:45 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:38:45 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:38:45 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:38:45 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:38:45 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:38:45 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:38:45 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:38:45 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:38:45 | INFO | report_generator:generate_github_subscription_report:215 - 准备生成 GitHub 订阅总报告...
+2025-06-05 16:38:45 | DEBUG | report_generator:generate_github_subscription_report:267 - 为订阅仓库 songquanpeng/one-api 生成单项目报告部分...
+2025-06-05 16:38:45 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T08:38:45.331666+00:00 (1 days)
+2025-06-05 16:38:45 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 16:38:46 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 16:38:47 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 16:38:48 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 16:38:49 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 16:38:49 | INFO | report_generator:generate_github_subscription_report:288 - LLM 提示 (e.g., github_digest) 或 LLM 实例未完全配置，返回组合数据报告。
+2025-06-05 16:39:26 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:39:26 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:39:26 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:39:26 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:39:26 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:39:26 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:39:26 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:39:26 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:39:26 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:39:26 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:39:26 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:39:26 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:39:26 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:39:26 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:39:26 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:39:26 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_hours_topic' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:39:26 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'hacker_news_daily_report' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:39:26 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:39:26 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:301 - 使用提示生成 HN 小时主题报告: 'Please summarize the following content:...'
+2025-06-05 16:39:26 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 16:39:41 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='876fe492-4aef-4d29-b8c1-1712d5268790', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于您没有提供具体的Hacker News小时数据内容，我无法生成准确的摘要。不过，通常Hacker News每小时的热门内容可能包括：\n\n1. **技术讨论** - 关于编程语言、框架或开发工具的讨论\n2. **创业新闻** - 初创公司融资、产品发布等\n3. **科技趋势** - AI、区块链等前沿技术动态\n4. **争议话题** - 引发社区热烈辩论的议题\n5. "Ask HN" - 社区问答帖\n6. "Show HN" - 用户展示项目\n\n如果您能提供具体的数据或文章链接，我可以为您生成更精确的摘要。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749112767, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=136, prompt_tokens=19, total_tokens=155, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=19))
+2025-06-05 16:39:41 | INFO | report_generator:generate_hacker_news_hours_topic_report:308 - Hacker News 小时主题报告已生成。
+2025-06-05 16:58:45 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:58:45 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:58:45 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:58:45 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:58:45 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:58:45 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:58:46 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:58:46 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:58:46 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:58:46 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:58:46 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:58:46 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:58:46 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:58:46 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:58:46 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:58:46 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 16:58:46 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 16:58:46 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:58:46 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:301 - 使用提示生成 HN 小时主题报告: 'Please summarize the key Hacker News topics from t...'
+2025-06-05 16:58:46 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 16:59:04 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='db598a3f-1cb8-48e6-a613-13ab0cf086f0', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='Here’s a concise summary of the key themes and noteworthy items from the latest Hacker News top stories:\n\n### **Main Themes**  \n1. **AI & Machine Learning**  \n   - Discussion on new open-source AI models and their applications.  \n   - Debate over the ethics of AI-generated content.  \n\n2. **Programming & Tools**  \n   - Release of a new lightweight framework for web development.  \n   - Tips for optimizing performance in large-scale systems.  \n\n3. **Startups & Business**  \n   - Analysis of recent tech startup valuations and funding trends.  \n   - Case study on a bootstrapped company’s success story.  \n\n4. **Security & Privacy**  \n   - Vulnerability disclosure in a widely used library.  \n   - Discussion on data privacy regulations and compliance.  \n\n5. **Miscellaneous**  \n   - A thought-provoking essay on remote work productivity.  \n   - Showcase of an innovative open-source hardware project.  \n\n### **Noteworthy Items**  \n- **"X Framework 1.0 Released"** – A new minimalist web framework gaining traction for its simplicity.  \n- **"Major Security Flaw in Library Y"** – Urgent patch recommended for developers.  \n- **"How Startup Z Grew Without VC Funding"** – Inspiring read for indie hackers.  \n\nLet me know if you\'d like a deeper dive into any topic!', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749113927, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=286, prompt_tokens=58, total_tokens=344, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=58))
+2025-06-05 16:59:04 | INFO | report_generator:generate_hacker_news_hours_topic_report:308 - Hacker News 小时主题报告已生成。
+2025-06-05 16:59:50 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 16:59:50 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 16:59:50 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 16:59:50 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 16:59:50 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 16:59:50 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 16:59:51 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 16:59:51 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 16:59:51 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 16:59:51 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 16:59:51 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 16:59:51 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 16:59:51 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 16:59:51 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 16:59:51 | WARNING | report_generator:_preload_prompts:39 - Prompt file not configured or does not exist for key: 'github' (Expected Path: None). Skipping this prompt.
+2025-06-05 16:59:51 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 16:59:51 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 16:59:51 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 16:59:51 | DEBUG | report_generator:generate_hacker_news_daily_report:320 - 使用提示生成 HN 每日摘要报告: 'Please provide a daily digest of the main themes f...'
+2025-06-05 16:59:51 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 17:00:15 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='4fbaf27b-29cb-4fcd-b3c6-42592d851322', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于我目前无法直接访问实时数据或互联网，无法获取最新的Hacker News每日主题摘要。不过，我可以提供一个基于Hacker News常见主题的**模拟摘要模板**，供您参考。当您提供实际数据后，我可以为您生成定制化的每日摘要。\n\n---\n\n### **Hacker News 每日主题摘要（示例）**  \n**日期**: 2023-10-05  \n\n#### 1. **人工智能与机器学习**  \n- **热门讨论**: OpenAI发布新模型，引发关于AI伦理和开源替代品的争论。  \n- **关键观点**: 用户对模型透明度和商业化策略的分歧显著。  \n\n#### 2. **编程语言与工具**  \n- **Rust 1.70版本发布**: 性能改进受好评，但学习曲线仍被提及。  \n- **VS Code新插件生态**: 开发者分享生产力提升技巧。  \n\n#### 3. **创业与投资**  \n- **YC冬季批次公布**: 多家AI初创公司入选，引发对市场饱和的担忧。  \n- **加密货币动态**: 某DeFi项目漏洞分析帖引发安全讨论。  \n\n#### 4. **科技政策与隐私**  \n- **欧盟数字法案更新**: 用户争议其对中小开发者的影响。  \n- **Signal隐私功能升级**: 获赞但被质疑推广策略。  \n\n#### 5. **深度技术长文**  \n- 《量子计算实用化进展》一文引发热议，部分用户认为炒作过度。  \n\n---\n\n### **重复出现的关键词**  \n- AI伦理、Rust、隐私保护、YC创业、加密货币  \n\n### **显著争议点**  \n- **AI监管**是否应由企业主导？  \n- **Rust vs. Go**在系统编程中的优劣。  \n\n如需实际摘要，请提供具体内容或数据源，我将为您生成精准版本！', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749113991, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=384, prompt_tokens=60, total_tokens=444, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=60))
+2025-06-05 17:00:15 | INFO | report_generator:generate_hacker_news_daily_report:327 - Hacker News 每日摘要报告已生成。
+2025-06-05 17:24:12 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 17:24:12 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 17:24:12 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 17:24:12 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 17:24:12 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 17:24:12 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 17:24:13 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 17:24:13 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 17:24:13 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 17:24:13 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 17:24:13 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 17:24:13 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 17:24:13 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 17:24:13 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 17:24:13 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'github' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\github_prompt.txt
+2025-06-05 17:24:13 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 17:24:13 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 17:24:13 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 17:24:13 | DEBUG | report_generator:generate_hacker_news_daily_report:364 - 使用提示生成 HN 每日摘要报告: 'Please provide a comprehensive daily digest of the...'
+2025-06-05 17:24:13 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 17:24:37 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='79d68311-0254-4815-8405-c5ef90c1f0f4', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于您尚未提供具体的Hacker News内容数据，目前无法生成完整的每日主题摘要报告。不过，我可以为您展示一个假设性的报告框架示例。当您提供实际数据后，我将按以下结构为您分析：\n\n---\n\n### **Hacker News 每日主题摘要**  \n**日期**: [输入日期]  \n\n#### **1. 高频重复主题**  \n- **AI/机器学习**（出现5次）  \n  - 讨论焦点：LLM推理优化技术、开源模型争议  \n  - 典型案例：用户@xxx分享《降低Transformer内存占用的新方法》引发性能优化讨论  \n- **Rust语言生态**（出现3次）  \n  - 趋势：编译器更新、WASM工具链支持成为热点  \n\n#### **2. 重大技术发布**  \n- **PostgreSQL 16 Beta发布**  \n  - 关键特性：并行查询改进、逻辑复制增强  \n  - 用户争议：部分开发者认为升级路径复杂  \n\n#### **3. 争议性话题**  \n- **“程序员是否过度依赖Copilot？”**（120+评论）  \n  - 支持方：提升原型开发效率  \n  - 反对方：导致代码理解能力下降  \n\n#### **4. 深度讨论趋势**  \n- **小型自托管工具复兴**  \n  - 相关项目：RSS阅读器、替代Cloudflare的轻量CDN方案  \n  - 用户动机：数据主权意识增强  \n\n#### **5. 其他值得关注**  \n- 硬件黑客：自制RISC-V开发板项目获大量星标  \n- 职场文化：远程团队异步沟通经验分享  \n\n--- \n\n请提供具体的Hacker News数据（如标题/链接/关键讨论点），我将为您生成真实完整的分析报告。您希望优先关注哪些特定领域（如AI、前端开发、创业等）？', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749115453, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=389, prompt_tokens=93, total_tokens=482, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=93))
+2025-06-05 17:24:37 | INFO | report_generator:generate_hacker_news_daily_report:371 - Hacker News 每日摘要报告已生成。
+2025-06-05 17:24:54 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 17:24:54 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 17:24:54 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 17:24:54 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 17:24:54 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 17:24:54 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 17:24:54 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 17:24:54 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 17:24:54 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 17:24:54 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 17:24:54 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 17:24:54 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 17:24:54 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 17:24:54 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 17:24:54 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'github' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\github_prompt.txt
+2025-06-05 17:24:54 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 17:24:54 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 17:24:54 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 17:24:54 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:345 - 使用提示生成 HN 小时主题报告: 'Please summarize the key Hacker News topics from t...'
+2025-06-05 17:24:54 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 17:25:09 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='edeef1cc-d2ce-45bb-94fb-742d29a72050', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于未提供具体的Hacker News小时数据内容，目前无法生成总结报告。若需分析，请提供以下信息：  \n\n1. **当前Top 10故事标题及链接**  \n2. **高讨论度帖子的核心议题**（如技术趋势、争议事件等）  \n3. **用户热议焦点**（如代码库、创业动态、政策影响等）  \n\n示例格式（虚构数据）：  \n---  \n**Hacker News小时热榜摘要**  \n1. **AI代码生成工具争议**（链接）  \n   - 用户争论Copilot是否侵蚀开源生态，支持者认为提效显著。  \n2. **Rust 2.0提案曝光**（链接）  \n   - 核心开发者提议简化内存模型，引发社区分裂。  \n3. **某初创公司0到1M用户复盘**（链接）  \n   - 低成本增长策略获赞，但技术债问题被多次提及。  \n\n请补充数据后获取完整分析。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749115494, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=207, prompt_tokens=64, total_tokens=271, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=64))
+2025-06-05 17:25:09 | INFO | report_generator:generate_hacker_news_hours_topic_report:352 - Hacker News 小时主题报告已生成。
+2025-06-05 18:18:08 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 18:18:08 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 18:18:08 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 18:18:08 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 18:18:08 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 18:18:08 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 18:18:09 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 18:18:09 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 18:18:09 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 18:18:09 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 18:18:09 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 18:18:09 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 18:18:09 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 18:18:09 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 18:18:09 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'github' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\github_prompt.txt
+2025-06-05 18:18:09 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 18:18:09 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 18:18:09 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 18:18:09 | INFO | report_generator:generate_github_subscription_report:259 - 准备生成 GitHub 订阅总报告...
+2025-06-05 18:18:09 | DEBUG | report_generator:generate_github_subscription_report:311 - 为订阅仓库 songquanpeng/one-api 生成单项目报告部分...
+2025-06-05 18:18:09 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:101 - Fetching updates for songquanpeng/one-api since 2025-06-04T10:18:09.163402+00:00 (1 days)
+2025-06-05 18:18:09 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-05 18:18:09 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-05 18:18:11 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-05 18:18:12 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-05 18:18:14 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-05 18:18:14 | INFO | report_generator:generate_github_subscription_report:332 - LLM 提示 (e.g., github_digest) 或 LLM 实例未完全配置，返回组合数据报告。
+2025-06-05 18:25:20 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 18:25:20 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 18:25:20 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 18:25:20 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 18:25:20 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 18:25:20 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 18:25:20 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 18:25:20 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 18:25:20 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 18:25:20 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 18:25:20 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 18:25:20 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 18:25:20 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 18:25:20 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 18:25:20 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'github' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\github_prompt.txt
+2025-06-05 18:25:20 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 18:25:20 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 18:25:20 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 18:25:20 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:345 - 使用提示生成 HN 小时主题报告: 'Please summarize the key Hacker News topics from t...'
+2025-06-05 18:25:20 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 18:25:32 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='9191c9de-2371-45d5-9add-e8b2ac740f02', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于未提供具体的Hacker News小时数据内容，目前无法生成总结报告。  \n\n若需帮助，请提供以下信息：  \n1. **标题与链接**：Top 10-20条热门帖子的标题和URL  \n2. **核心话题**：技术趋势（如AI/编程语言）、创业动态、争议事件等  \n3. **高亮内容**：特别高赞或讨论激烈的帖子  \n\n示例格式提示：  \n> **主题**：AI代码工具争议  \n> **关键帖**：《GitHub Copilot被指侵权》（320赞）  \n> **用户焦点**：版权问题是否阻碍创新  \n\n提供数据后，我将立即生成简洁中文报告。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749119121, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=144, prompt_tokens=64, total_tokens=208, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=64))
+2025-06-05 18:25:32 | INFO | report_generator:generate_hacker_news_hours_topic_report:352 - Hacker News 小时主题报告已生成。
+2025-06-05 18:35:36 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 18:35:36 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 18:35:36 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 18:35:36 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 18:35:36 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 18:35:36 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 18:35:37 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 18:35:37 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 18:35:37 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 18:35:37 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 18:35:37 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 18:35:37 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 18:35:37 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 18:35:37 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 18:35:37 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'github' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\github_prompt.txt
+2025-06-05 18:35:37 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 18:35:37 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 18:35:37 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 18:35:37 | DEBUG | report_generator:generate_hacker_news_hours_topic_report:345 - 使用提示生成 HN 小时主题报告: 'Please summarize the key Hacker News topics from t...'
+2025-06-05 18:35:37 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 18:35:48 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='30c3dba0-7899-4617-8025-080fdbd3b6c0', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于您未提供具体的Hacker News小时数据内容，目前无法生成总结报告。若需帮助，请提供以下信息：  \n\n1. **标题与链接**：当前热门讨论的帖子标题及链接  \n2. **核心话题**：技术趋势（如AI/编程语言）、创业动态、争议事件等  \n3. **高亮内容**：特别高赞或激烈讨论的条目  \n\n示例格式提示：  \n- **主题**：AI代码生成工具争议  \n- **关键帖**：《Copilot被指侵权开源代码》（点赞数：287）  \n- **用户争论焦点**：版权合规性 vs. 开发者效率提升  \n\n提供数据后，我将立即为您整理简明中文报告。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749119738, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=150, prompt_tokens=64, total_tokens=214, prompt_tokens_details={'cached_tokens': 0}, prompt_cache_hit_tokens=0, prompt_cache_miss_tokens=64))
+2025-06-05 18:35:48 | INFO | report_generator:generate_hacker_news_hours_topic_report:352 - Hacker News 小时主题报告已生成。
+2025-06-05 18:35:55 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-05 18:35:55 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-05 18:35:55 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-05 18:35:55 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-05 18:35:55 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-05 18:35:55 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-05 18:35:55 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-05 18:35:55 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'sk-YUdLuBFFbERqwkQ28fB83c1047Fc42E3A06dEb96859c8c88', 'base_url': 'https://one.xixuer.cn/v1', 'http_client': 'Client'}
+2025-06-05 18:35:55 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): sk-YU...8c88
+2025-06-05 18:35:55 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://one.xixuer.cn/v1
+2025-06-05 18:35:55 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-05 18:35:55 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-05 18:35:55 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-05 18:35:55 | DEBUG | report_generator:_preload_prompts:21 - Preloading prompts...
+2025-06-05 18:35:55 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'github' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\github_prompt.txt
+2025-06-05 18:35:55 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_hours_topic' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_hours_topic_prompt.txt
+2025-06-05 18:35:55 | DEBUG | report_generator:_preload_prompts:47 - Successfully loaded prompt for 'hacker_news_daily_report' from C:\Users\11861\Desktop\项目\GitHubSentinel\prompts\hacker_news_daily_report_prompt.txt
+2025-06-05 18:35:56 | INFO | report_generator:_preload_prompts:51 - Prompts loaded for types: ['github', 'hacker_news_hours_topic', 'hacker_news_daily_report']
+2025-06-05 18:35:56 | DEBUG | report_generator:generate_hacker_news_daily_report:364 - 使用提示生成 HN 每日摘要报告: 'Please provide a comprehensive daily digest of the...'
+2025-06-05 18:35:56 | INFO | llm:_generate_report_openai:151 - 使用 OpenAI deepseek-chat 模型生成报告 (Base URL: https://one.xixuer.cn/v1)。
+2025-06-05 18:36:23 | DEBUG | llm:_generate_report_openai:157 - GPT 响应: ChatCompletion(id='779cd564-8e2f-4846-8ad0-e562bf5e483c', choices=[Choice(finish_reason='stop', index=0, logprobs=None, message=ChatCompletionMessage(content='由于目前没有提供具体的Hacker News内容数据，我将基于典型模式生成一份模拟摘要报告。若提供实际数据，可进一步定制分析。\n\n---\n\n### **Hacker News 每日主题摘要**  \n*（根据多时段聚合数据整理）*  \n\n#### **1. 高频重复主题**  \n- **AI/LLM 进展**  \n  - 多个帖子讨论开源大模型（如Llama 3、Mistral）的优化和商业化案例。  \n  - 争议点：模型训练数据的版权问题再次引发辩论。  \n\n- **Rust 语言生态**  \n  - 工具链更新（如Cargo新特性）和“Rust替代C++”的案例研究受关注。  \n  - 用户反馈学习曲线仍是主要障碍。  \n\n- **隐私与安全事件**  \n  - 某知名云服务商漏洞曝光（如AWS/Azure），涉及权限绕过问题。  \n  - 零日漏洞利用工具包在野传播的警告。  \n\n#### **2. 深度讨论话题**  \n- **“Postgres 还是 MongoDB？”**  \n  - 围绕最新基准测试结果，争论OLTP场景下的性能取舍。  \n  - 开发者分享分片策略和JSONB字段优化经验。  \n\n- **远程工作文化反思**  \n  - 部分公司强制返岗引发抗议，评论区分化明显。  \n  - 工具链推荐：异步协作工具（如Zulip）的实践案例。  \n\n#### **3. 新兴趋势**  \n- **本地优先（Local-First）软件**  \n  - CRDT协议和离线协同编辑工具（如Tiptap）热度上升。  \n- **硬件黑客项目**  \n  - RISC-V开发板低价化带动DIY热潮，如VisionFive 2实战评测。  \n\n#### **4. 其他亮点**  \n- 一篇《为什么我们弃用Kubernetes》引发激烈反驳，争论复杂度与收益平衡。  \n- 某初创公司开源其“失败项目”代码库，获赞“透明精神”。  \n\n--- \n\n**注**：实际分析需基于具体数据，以上为常见主题示例。如需针对特定日期/数据集生成报告，请提供详细内容。', refusal=None, role='assistant', function_call=None, tool_calls=None))], created=1749119756, model='deepseek-chat', object='chat.completion', service_tier=None, system_fingerprint='fp_8802369eaa_prod0425fp8', usage=CompletionUsage(completion_tokens=469, prompt_tokens=93, total_tokens=562, prompt_tokens_details={'cached_tokens': 64}, prompt_cache_hit_tokens=64, prompt_cache_miss_tokens=29))
+2025-06-05 18:36:23 | INFO | report_generator:generate_hacker_news_daily_report:371 - Hacker News 每日摘要报告已生成。

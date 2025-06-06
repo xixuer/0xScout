@@ -1,0 +1,30 @@
+{
+    "github": {
+        "token": "",
+        "subscriptions_file": "subscriptions.json",
+        "progress_frequency_days": 1,
+        "progress_execution_time": "08:00"
+    },
+    "email": {
+        "smtp_server": "smtp.exmail.qq.com",
+        "smtp_port": 465,
+        "from": "pjt@zaijidata.com",
+        "password": "",
+        "to": [],
+        "provider": "自定义"
+    },
+    "llm": {
+        "model_type": "openai",
+        "openai_model_name": "",
+        "openai_base_url": "",
+        "openai_api_key": ""
+    },
+    "report_types": [
+        "github",
+        "hacker_news_hours_topic",
+        "hacker_news_daily_report"
+    ],
+    "slack": {
+        "webhook_url": "your_slack_webhook_url"
+    }
+}

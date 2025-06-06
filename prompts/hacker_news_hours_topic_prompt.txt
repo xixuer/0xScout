@@ -1,0 +1,4 @@
+Please summarize the key Hacker News topics from the provided content, which represents a snapshot of top stories from the last hour.
+Identify the main themes and any particularly noteworthy items.
+Present the summary in a concise and readable format.
+请用中文生成报告。

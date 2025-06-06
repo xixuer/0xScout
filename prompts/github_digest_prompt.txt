@@ -1,0 +1,108 @@
+# ======================================================================
+# DEPRECATED PROMPT
+# This prompt is no longer actively used by the ReportGenerator for the
+# "all subscribed repositories" GitHub report. That report now generates
+# individual summaries for each repository using the 'github' prompt
+# (e.g., prompts/github_openai_prompt.txt or prompts/github_prompt.txt).
+#
+# This digest prompt is kept for historical purposes or if a digest-style
+# summary feature is revisited in the future.
+# Original detailed instructions for a bilingual digest followed below.
+# ======================================================================
+
+你将收到一份包含多个 GitHub 项目近期更新的汇总信息。请你根据这份信息，生成一份**整体的摘要报告 (Overall Digest Report)**。
+
+**核心要求 (Core Requirement):**
+这份摘要报告必须是**中英双语**的。对于报告中你提炼出的每一个主要趋势、共同主题、重要项目更新点或任何值得注意的观察结果，都必须严格遵循“先中文，后英文”的交替段落结构。
+
+**重要格式要求 (Formatting Requirements):**
+1.  **严格中英交替 (Strict Alternating Bilingual Structure):** **每一个独立的总结点或信息单元**都必须首先用中文完整阐述，然后紧随其后的是对应的英文翻译。不允许出现一个中文点后紧跟另一个中文点，或者英文点后紧跟另一个英文点的情况。必须是“中文段落(组) -> 英文段落(组) -> 中文段落(组) -> 英文段落(组) ...”的序列。
+    *   **中文部分:** 用一段或多段中文进行清晰、完整地阐述。
+    *   **英文部分:** 紧接着用一段或多段英文提供对应的翻译。
+2.  **语义准确对应 (Semantic Equivalence):** 中文内容和其后的英文翻译必须在意义上完全对应。
+3.  **清晰分隔 (Clear Separation):** 不同的中英双语总结单元之间应有明确的视觉分隔（例如，使用 Markdown 的 `---` 分隔线，或者至少确保足够的段落间距）。
+
+**总结深度与信息取舍 (Summary Depth and Information Prioritization):**
+在生成整体摘要时，请侧重于那些在输入数据中具有较丰富描述信息（如项目 Release Notes 或详细的 Commit 描述）的更新。对于仅有模糊标题且缺乏上下文信息的条目，在摘要中提及即可，并可指出细节需查阅原文。避免对信息不足的条目进行过度解读或简单翻译标题。目标是提供一个基于现有信息的、有洞察力的、真实的总结。
+
+When generating the overall digest, focus on updates that have richer descriptive information in the input data (e.g., project Release Notes or detailed Commit descriptions). For items with only vague titles and lacking context, mentioning them in the digest is sufficient, possibly noting that details should be consulted in the original source. Avoid over-interpreting or simply translating titles of information-poor items. The goal is to provide an insightful and truthful summary based on the available information.
+
+**内容组织建议 (Content Organization Suggestion):**
+你可以考虑按以下方式组织你的摘要报告内容，但无论选择哪种方式，都必须对每个信息点应用上述的中英双语交替格式：
+*   **按主题/趋势总结 (By Theme/Trend Summary):** 如果多个项目展现出共同的技术趋势（例如，AI集成、安全修复、性能优化等），或相似类型的功能更新，可以围绕这些主题进行总结。
+*   **按项目总结 (By Project Summary):** 如果更新信息较分散，或者特定项目有重大且独特的进展，可以逐个总结每个重要项目的核心动态。
+
+**报告风格 (Report Style):**
+请确保报告语言流畅，信息准确，重点突出。摘要应提炼出最重要的信息，而不是简单罗列所有细节。
+
+**示例格式 (Example Format):**
+以下是摘要报告中**两个不同总结点**的格式示例。请在你的报告中对每一个总结点或信息单元应用类似的结构和中英交替要求：
+
+---
+**(总结点1 - 例如，一个跨项目的技术趋势分析)**
+
+**中文阐述:**
+本周观察到多个前端项目（例如 Project Alpha, Project Beta）均发布了重要更新，重点在于提升应用的初始加载性能和交互响应速度。Project Alpha 通过代码分割和懒加载技术，将其首页加载时间缩短了约40%。Project Beta 则通过优化其状态管理逻辑，显著改善了复杂操作下的界面流畅度。这些共同的努力方向突显出业界对于提升用户体验的持续关注。
+
+**English Elaboration:**
+This week, several front-end projects (e.g., Project Alpha, Project Beta) released significant updates focusing on improving initial application load performance and interactive responsiveness. Project Alpha, through code splitting and lazy loading techniques, reduced its homepage load time by approximately 40%. Project Beta, by optimizing its state management logic, significantly improved UI smoothness during complex operations. These shared efforts highlight the industry's ongoing focus on enhancing user experience.
+
+---
+**(总结点2 - 例如，一个特定项目的重要更新)**
+
+**中文阐述:**
+数据分析库 DataCruncher (Project Gamma) 发布了其 2.0 版本。此版本最引人注目的特性是引入了分布式计算引擎，能够处理远超以往版本的数据集规模。此外，新版本还重构了其核心API，使其更易于学习和使用，并提供了更完善的错误处理机制。官方文档也进行了全面修订，包含了更多教程和实际用例。
+
+**English Elaboration:**
+The data analysis library DataCruncher (Project Gamma) has released its version 2.0. The most notable feature of this version is the introduction of a distributed computing engine, capable of handling dataset sizes far exceeding previous versions. Additionally, the new version refactors its core API for easier learning and use, and provides more robust error handling. The official documentation has also been comprehensively revised, including more tutorials and practical use cases.
+---
+
+*(请在实际报告中根据输入信息提炼多个这样的中英双语总结点。报告的整体标题可以是“GitHub 项目更新摘要 (GitHub Projects Digest)”或类似内容。)*
+
+---
+The input you will receive is a collection of recent updates from multiple GitHub projects. Based on this aggregated information, please generate an **overall summary report (Overall Digest Report)**.
+
+**Core Requirement:**
+This summary report must be **bilingual (Chinese and English)**. For every main trend, common theme, significant project update, or any noteworthy observation you extract for the report, you must strictly follow an "alternating paragraph structure": Chinese first, then English.
+
+**Important Formatting Requirements:**
+1.  **Strict Alternating Bilingual Structure:** **Every individual summarized point or unit of information** must first be fully elaborated in Chinese, immediately followed by its corresponding English translation. It is not permissible for a Chinese point to be followed by another Chinese point, or an English point by another English point. The sequence must be "Chinese paragraph(s) -> English paragraph(s) -> Chinese paragraph(s) -> English paragraph(s) ...".
+    *   **Chinese Part:** Provide a clear and complete explanation in one or more Chinese paragraphs.
+    *   **English Part:** Immediately follow with the corresponding translation in one or more English paragraphs.
+2.  **Semantic Equivalence:** The Chinese content and its subsequent English translation must be entirely equivalent in meaning.
+3.  **Clear Separation:** There should be clear visual separation between different bilingual summary units (e.g., using Markdown's `---` horizontal rule, or at least ensuring sufficient paragraph spacing).
+
+**Summary Depth and Information Prioritization:**
+When generating the overall digest, focus on updates that have richer descriptive information in the input data (e.g., project Release Notes or detailed Commit descriptions). For items with only vague titles and lacking context, mentioning them in the digest is sufficient, possibly noting that details should be consulted in the original source. Avoid over-interpreting or simply translating titles of information-poor items. The goal is to provide an insightful and truthful summary based on the available information.
+
+**Content Organization Suggestion:**
+You might consider organizing your digest report content in the following ways. Regardless of the chosen method, the bilingual alternating format described above must be applied to each piece of information:
+*   **By Theme/Trend Summary:** If multiple projects exhibit common technological trends (e.g., AI integration, security fixes, performance optimization), or similar types of feature updates, you can summarize around these themes.
+*   **By Project Summary:** If updates are diverse, or if specific projects have major and unique advancements, you can summarize the core dynamics of each important project individually.
+
+**Report Style:**
+Ensure the report is fluent, accurate, and highlights key information. The summary should distill the most important information rather than simply listing all details.
+
+**Example Format:**
+Below are example formats for **two different summarized points** in the digest report. Please apply a similar structure and bilingual alternating requirement to every summarized point or unit of information in your report:
+
+---
+**(Summary Point 1 - e.g., a cross-project technical trend analysis)**
+
+**中文阐述:**
+本周观察到多个前端项目（例如 Project Alpha, Project Beta）均发布了重要更新，重点在于提升应用的初始加载性能和交互响应速度。Project Alpha 通过代码分割和懒加载技术，将其首页加载时间缩短了约40%。Project Beta 则通过优化其状态管理逻辑，显著改善了复杂操作下的界面流畅度。这些共同的努力方向突显出业界对于提升用户体验的持续关注。
+
+**English Elaboration:**
+This week, several front-end projects (e.g., Project Alpha, Project Beta) released significant updates focusing on improving initial application load performance and interactive responsiveness. Project Alpha, through code splitting and lazy loading techniques, reduced its homepage load time by approximately 40%. Project Beta, by optimizing its state management logic, significantly improved UI smoothness during complex operations. These shared efforts highlight the industry's ongoing focus on enhancing user experience.
+
+---
+**(Summary Point 2 - e.g., a significant update for a specific project)**
+
+**中文阐述:**
+数据分析库 DataCruncher (Project Gamma) 发布了其 2.0 版本。此版本最引人注目的特性是引入了分布式计算引擎，能够处理远超以往版本的数据集规模。此外，新版本还重构了其核心API，使其更易于学习和使用，并提供了更完善的错误处理机制。官方文档也进行了全面修订，包含了更多教程和实际用例。
+
+**English Elaboration:**
+The data analysis library DataCruncher (Project Gamma) has released its version 2.0. The most notable feature of this version is the introduction of a distributed computing engine, capable of handling dataset sizes far exceeding previous versions. Additionally, the new version refactors its core API for easier learning and use, and provides more robust error handling. The official documentation has also been comprehensively revised, including more tutorials and practical use cases.
+---
+
+*(请在实际报告中根据输入信息提炼多个这样的中英双语总结点。报告的整体标题可以是“GitHub 项目更新摘要 (GitHub Projects Digest)”或类似内容。)*
