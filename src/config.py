@@ -3,8 +3,9 @@ import os
 from logger import LOG # Added LOG import
 
 class Settings: # Renamed from Config
-    def __init__(self, config_file='config.json'): # Added config_file parameter
+    def __init__(self, config_file='config.json', overrides=None): # Added config_file parameter
         self.config_file = config_file # Store config_file path
+        self.overrides = overrides if overrides else {}
         self.load_config()
     
     def load_config(self):
@@ -52,6 +53,42 @@ class Settings: # Renamed from Config
             # 加载 Slack 配置
             slack_config = config.get('slack', {})
             self.slack_webhook_url = slack_config.get('webhook_url')
+
+        # Apply overrides if any
+        if self.overrides:
+            LOG.debug(f"Applying configuration overrides: {self.overrides}")
+
+            # LLM Overrides
+            llm_overrides = self.overrides.get('llm')
+            if isinstance(llm_overrides, dict):
+                LOG.debug(f"Applying LLM overrides: {llm_overrides}")
+                self.llm_model_type = llm_overrides.get('model_type', self.llm_model_type)
+
+                if self.llm_model_type == 'openai':
+                    self.openai_model_name = llm_overrides.get('openai_model_name', self.openai_model_name)
+                    # OPENAI_API_KEY is intentionally not overridden here for security (handled by initial load from env/config)
+                    # However, openai_base_url can be overridden if provided
+                    self.llm_openai_base_url = llm_overrides.get('openai_base_url', self.llm_openai_base_url)
+                    # Ensure a default if it becomes empty after override attempt or was not set by file/env
+                    if not self.llm_openai_base_url: # This check also handles if llm_overrides.get returns None and self.llm_openai_base_url was also None/empty
+                         self.llm_openai_base_url = 'https://api.openai.com/v1'
+                elif self.llm_model_type == 'ollama':
+                    self.ollama_model_name = llm_overrides.get('ollama_model_name', self.ollama_model_name)
+                    self.ollama_api_url = llm_overrides.get('ollama_api_url', self.ollama_api_url)
+                LOG.info(f"LLM settings after override: type='{self.llm_model_type}', openai_model='{self.openai_model_name}', ollama_model='{self.ollama_model_name}', openai_base_url='{self.llm_openai_base_url}'")
+
+            # Example for other sections:
+            # email_overrides = self.overrides.get('email')
+            # if isinstance(email_overrides, dict):
+            #     # self.email.update(email_overrides) # Simple dict update
+            #     # Or more specific attribute updates if email settings are direct attributes
+            #     for key, value in email_overrides.items():
+            #         if hasattr(self, f"email_{key}"): # Assuming attributes like self.email_smtp_server
+            #             setattr(self, f"email_{key}", value)
+            #         elif key in self.email: # If self.email is a dict
+            #             self.email[key] = value
+            #     LOG.info("Email settings updated via overrides.")
+
 
     # --- Getter methods for various configurations ---
 
