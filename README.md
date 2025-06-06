@@ -9,7 +9,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/DjangoPeng/0xScout?color=red)
 
 <p align="center">
-    <br> <a href="README-EN.md">English</a> | 中文
+    <br> 中文
 </p>
 
 ## 目录
@@ -26,16 +26,6 @@
     - [C. 作为 Streamlit Web 应用运行](#c-作为-streamlit-web-应用运行)
 - [Ollama 安装与服务发布](#Ollama-安装与服务发布)
 - [单元测试](#单元测试)
-  - [单元测试和验证脚本 `validate_tests.sh`](#单元测试和验证脚本-validate_testssh)
-    - [用途](#用途)
-    - [功能](#功能)
-- [使用 Docker 构建与验证](#使用-docker-构建与验证)
-  - [1. `Dockerfile`](#1-dockerfile)
-    - [用途](#用途)
-    - [关键步骤](#关键步骤)
-  - [2. `build_image.sh`](#2-build_imagesh)
-    - [用途](#用途)
-    - [功能](#功能)
 - [贡献](#贡献)
 - [许可证](#许可证)
 - [联系](#联系)
