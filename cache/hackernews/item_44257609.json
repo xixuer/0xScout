@@ -1,0 +1,23 @@
+{
+  "data": {
+    "by": "andrew_bbb",
+    "descendants": 8,
+    "id": 44257609,
+    "kids": [
+      44264581,
+      44264079,
+      44263173,
+      44262981,
+      44262917,
+      44258264
+    ],
+    "score": 92,
+    "text": "Hey! Check out my &quot;toy&quot; text editor which I use as my daily driver.<p>Features\nLSP autocomplete, goto definition, hover info<p>Tree-sitter support<p>Color themes (borrowed from the Helix text editor)<p>Lots of bugs<p>Macro support<p>Something like Emacs org-mode: Open test.txt, place the cursor at line 15, and press &quot;Ctrl-C Ctrl-C&quot;.<p>This project was written as a &quot;speed run&quot; — not for speed in terms of time, but rather as an exercise to explore the text editor problem space without overthinking or planning ahead. It’s a quick and &quot;dirty&quot; implementation, so to speak.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;firstrow&#x2F;mcwig\">https:&#x2F;&#x2F;github.com&#x2F;firstrow&#x2F;mcwig</a>",
+    "time": 1749735176,
+    "title": "Show HN: McWig – A modal, Vim-like text editor written in Go",
+    "type": "story",
+    "url": "https://github.com/firstrow/mcwig"
+  },
+  "created_at": 1749791404.6547253,
+  "expires_at": 1749795004.6547256
+}

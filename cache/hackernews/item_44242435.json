@@ -1,0 +1,29 @@
+{
+  "data": {
+    "by": "klaussilveira",
+    "descendants": 54,
+    "id": 44242435,
+    "kids": [
+      44259248,
+      44265804,
+      44259051,
+      44260639,
+      44258391,
+      44264565,
+      44260119,
+      44258675,
+      44258361,
+      44260670,
+      44258877,
+      44259444,
+      44261003
+    ],
+    "score": 139,
+    "time": 1749596211,
+    "title": "Helion: A modern fast paced Doom FPS engine in C#",
+    "type": "story",
+    "url": "https://github.com/Helion-Engine/Helion"
+  },
+  "created_at": 1749791410.6619346,
+  "expires_at": 1749795010.6619349
+}

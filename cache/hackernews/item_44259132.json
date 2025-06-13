@@ -1,0 +1,34 @@
+{
+  "data": {
+    "by": "zdw",
+    "descendants": 123,
+    "id": 44259132,
+    "kids": [
+      44260146,
+      44262701,
+      44262106,
+      44263509,
+      44260250,
+      44262265,
+      44259744,
+      44262081,
+      44262991,
+      44262451,
+      44260081,
+      44259751,
+      44260852,
+      44259820,
+      44261942,
+      44262644,
+      44260875,
+      44260132
+    ],
+    "score": 341,
+    "time": 1749743380,
+    "title": "macOS Tahoe brings a new disk image format",
+    "type": "story",
+    "url": "https://eclecticlight.co/2025/06/12/macos-tahoe-brings-a-new-disk-image-format/"
+  },
+  "created_at": 1749776097.6940026,
+  "expires_at": 1749779697.6940029
+}

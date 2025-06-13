@@ -1,0 +1,22 @@
+{
+  "data": {
+    "by": "hunterirving",
+    "descendants": 9,
+    "id": 44257655,
+    "kids": [
+      44265818,
+      44265073,
+      44264987,
+      44263713,
+      44264030
+    ],
+    "score": 76,
+    "text": "I recently dug my Nintendo GameCube out of storage to revisit the first Animal Crossing game. Things were mostly as I remembered, but the game&#x27;s heavy reliance on a clunky on-screen keyboard quickly wore my patience thin.<p>Unwilling to accept this subpar experience, I did what any rational person would do and ordered a rare, Japan-exclusive, keyboard&#x2F;controller hybrid on eBay, then used a Raspberry Pi Pico to 1. listen for keypresses and 2. send simulated controller events to the GameCube, automating typing in Animal Crossing at a Tool-Assisted Speedrun level.<p>Of course, this oddball controller&#x27;s keycaps didn&#x27;t map perfectly to Animal Crossing&#x27;s in-game character set, so I watched a 10 hour FreeCAD tutorial at 2x speed, then modeled the 7 keycap profiles to create 81 custom, 3D printed keycaps, taking care to include even the most esoteric Greek and Old English characters that Nintendo chose to include in the game.<p>And then, having solved my original problem, I decided to sniff out some new ones.\nI used my homemade TAS device to automate the entry of customizable &quot;Town Tune&quot; melodies, took advantage of a cracked encryption algorithm to give on-demand access to (almost) every item in the game, and, in a Club-Mate-fueled haze, whipped up a Python script to convert arbitrary images to the game&#x27;s 32x32 pixel custom design format.<p>Even at superhuman speed, those 1024 pixels took about 3 minutes to input, but that didn&#x27;t stop me from extending the concept to video - playing Rick Astley&#x27;s &quot;Never Gonna Give You Up&quot;, Bad Apple!, Shrek, and even a short gameplay video of DOOM very, veryyyy slowly (about 7.5 hours to render 30 seconds of footage at 5fps).<p>Then, realizing that DOOM at 0.0056fps probably wouldn&#x27;t be the most &quot;playable&quot; thing in the world, I set out to get some kind of video game running within Animal Crossing, and ultimately landed on Snake.<p>Since it only needs to update 1 pixel for every frame of animation, I was able to get Snake running at around 1ish* frames per second (for technical reasons, it runs at a variable framerate).\nMaybe not the most primo experience the modern gaming world has to offer, but without a doubt, <i>technically</i> a video game. It even has its own, in-memory high score ranking (so far I&#x27;m undefeated).<p>The code and design files are distributed for free on GitHub[0], and a build&#x2F;demonstration video[1] is out now on Youtube.<p>[0] - <a href=\"https:&#x2F;&#x2F;github.com&#x2F;hunterirving&#x2F;pico-crossing\">https:&#x2F;&#x2F;github.com&#x2F;hunterirving&#x2F;pico-crossing</a><p>[1] - <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Yw8Alf_lolA\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Yw8Alf_lolA</a><p>It started as a &quot;quick, simple project&quot;, then quickly ballooned into 7 or 8 &quot;quick, simple projects&quot;, but I had a ton of fun putting it all together. Thanks for checking it out!",
+    "time": 1749735426,
+    "title": "Show HN: Tool-Assisted Speedrunning the Boring Parts of Animal Crossing (GCN)",
+    "type": "story",
+    "url": "https://github.com/hunterirving/pico-crossing"
+  },
+  "created_at": 1749791406.6779022,
+  "expires_at": 1749795006.6779027
+}

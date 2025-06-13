@@ -1,0 +1,33 @@
+{
+    "github": {
+        "token": "",
+        "subscriptions_file": "subscriptions.json",
+        "progress_frequency_days": 1,
+        "progress_execution_time": "13:11"
+    },
+    "email": {
+        "smtp_server": "smtp.qq.com",
+        "smtp_port": 465,
+        "from": "1186195204@qq.com",
+        "password": "",
+        "to": [
+            "1542064804@qq.com"
+        ],
+        "provider": "QQ邮箱"
+    },
+    "llm": {
+        "model_type": "openai",
+        "openai_model_name": "doubao-seed-1-6-250615",
+        "openai_base_url": "https://ark.cn-beijing.volces.com/api/v3",
+        "openai_api_key": ""
+    },
+    "report_types": [
+        "github"
+    ],
+    "slack": {
+        "webhook_url": "your_slack_webhook_url"
+    },
+    "app_access": {
+        "password_hash": "25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7"
+    }
+}

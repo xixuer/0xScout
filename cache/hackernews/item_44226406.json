@@ -1,0 +1,30 @@
+{
+  "data": {
+    "by": "StefanBatory",
+    "descendants": 123,
+    "id": 44226406,
+    "kids": [
+      44238149,
+      44239332,
+      44240439,
+      44238297,
+      44238688,
+      44240567,
+      44238251,
+      44239101,
+      44237714,
+      44238333,
+      44238108,
+      44242151,
+      44238714,
+      44238429
+    ],
+    "score": 257,
+    "time": 1749487837,
+    "title": "Denuvo Analysis",
+    "type": "story",
+    "url": "https://connorjaydunn.github.io/blog/posts/denuvo-analysis/"
+  },
+  "created_at": 1749632426.1074178,
+  "expires_at": 1749636026.107418
+}

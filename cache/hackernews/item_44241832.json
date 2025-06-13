@@ -1,0 +1,20 @@
+{
+  "data": {
+    "by": "matt_d",
+    "descendants": 8,
+    "id": 44241832,
+    "kids": [
+      44243337,
+      44244045,
+      44244485,
+      44244589
+    ],
+    "score": 54,
+    "time": 1749592004,
+    "title": "Modern Minimal Perfect Hashing: A Survey",
+    "type": "story",
+    "url": "https://arxiv.org/abs/2506.06536"
+  },
+  "created_at": 1749632425.2243237,
+  "expires_at": 1749636025.224324
+}

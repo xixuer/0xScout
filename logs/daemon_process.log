@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/root/0xScout/src/daemon_process.py", line 13, in <module>
+    from report_generator import ReportGenerator  # 导入报告生成器类
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/0xScout/src/report_generator.py", line 5, in <module>
+    from src.hacker_news_client import HackerNewsClient # Added for live HN fetch
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'src'
+Traceback (most recent call last):
+  File "/root/0xScout/src/daemon_process.py", line 13, in <module>
+    from report_generator import ReportGenerator  # 导入报告生成器类
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/0xScout/src/report_generator.py", line 5, in <module>
+    from src.hacker_news_client import HackerNewsClient # Added for live HN fetch
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'src'
+Traceback (most recent call last):
+  File "/root/0xScout/src/daemon_process.py", line 13, in <module>
+    from report_generator import ReportGenerator  # 导入报告生成器类
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/0xScout/src/report_generator.py", line 5, in <module>
+    from src.hacker_news_client import HackerNewsClient # Added for live HN fetch
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'src'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/0xScout/src/daemon_process.py", line 9, in <module>
+    from config import Settings as Config # 导入配置管理类 (using alias)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'config'

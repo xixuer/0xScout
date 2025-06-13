@@ -1,0 +1,25 @@
+{
+  "data": {
+    "by": "ibobev",
+    "descendants": 43,
+    "id": 44222307,
+    "kids": [
+      44261916,
+      44264642,
+      44262199,
+      44259247,
+      44260221,
+      44257341,
+      44257968,
+      44257225,
+      44259159
+    ],
+    "score": 122,
+    "time": 1749455699,
+    "title": "Quantum Computation Lecture Notes (2022)",
+    "type": "story",
+    "url": "https://math.mit.edu/~shor/435-LN/"
+  },
+  "created_at": 1749791411.101013,
+  "expires_at": 1749795011.1010132
+}

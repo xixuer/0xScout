@@ -1,0 +1,52 @@
+你接下来收到的都是开源项目的最新进展。这些进展信息将包括代码提交 (Commits)、已关闭的问题 (Issues)、已合并的拉取请求 (Pull Requests)，以及近期的版本发布 (Recent Releases)。
+
+请你根据这些进展，总结成一份详细的**中英双语报告**。对于报告中的每个信息点、每个功能、改进、修复或版本说明，请先用中文进行阐述（一个或多个段落），然后紧接着提供对应的英文翻译（一个或多个段落）。报告的整体结构应保持清晰，章节明确。报告以 项目名称和日期 开头。
+
+**重要总结原则 (Important Summarization Principles):**
+在总结每个条目时，请优先利用描述性信息（如 Release Notes 中的详细说明、内容丰富的 Commit messages）。如果某个条目（如 Pull Request 或 Issue 标题）本身信息量较少（例如仅为 “修复Bug #123”）并且在提供的上下文中没有其他细节，请直接陈述该标题，并指出详细信息需参考原始链接。不要试图仅基于标题进行不充分的猜测性总结或简单的直接翻译。重点总结那些信息相对完整的部分。
+
+When summarizing each item, prioritize using descriptive information (e.g., detailed explanations in Release Notes, content-rich Commit messages). If an item (such as a Pull Request or Issue title) is itself sparse in information (e.g., just 'Fix Bug #123') and no further details are available in the provided context, please state the title directly and note that details should be referred to in the original link. Do not attempt to make an insufficient speculative summary or a simple direct translation based only on the title. Focus on summarizing those parts where information is relatively complete.
+
+报告应包含以下章节（如果某章节没有内容，则可以省略该章节）：
+
+1.  **新增功能 (New Features)**: 基于 Commits, Issues, PRs 和 Releases 中的信息，列出新增的主要功能和特性。
+2.  **主要改进 (Key Improvements)**: 基于 Commits, Issues, PRs 和 Releases，总结项目在性能、可用性、文档等方面的改进。
+3.  **修复问题 (Bug Fixes)**: 列出已解决的 Bugs 和问题，主要参考 Issues 和 PRs，但也可能在 Release notes 中提及。
+4.  **近期发布 (Recent Releases)**:
+    *   列出近期的重要版本发布（通常会提供名称、标签、发布者和发布日期）。
+    *   如果 Release Notes (通常在 `body` 字段) 可用且包含具体信息，请提炼其核心更新内容、新增功能或修复的问题。**请务必深入分析 Release Notes 的内容进行提炼总结，而不仅仅是翻译标题。 (Ensure you deeply analyze the content of the Release Notes for extraction and summary, not just translate titles.)**
+    *   简要说明这些 Releases 对项目的意义或带来的主要变化。
+
+请确保报告语言流畅，信息准确，重点突出。中英文内容配对应准确。
+
+参考示例如下 (注意：您的报告应根据实际输入内容调整，以下仅为格式和双语交替风格参考):
+
+# [项目名称] 项目进展报告 ([Project Name] Progress Report)
+# 注意：下面的“时间周期”行已被移除，因为日期范围现在由程序在主标题中提供。
+
+## 新增功能 (New Features)
+
+**中文描述:** 新增了批量创建物品的 API 端点 (`POST /api/v2/items`)。
+**English Description:** Added a new API endpoint (`POST /api/v2/items`) for bulk item creation.
+
+**中文描述:** UI 中添加了“高级搜索”模块。
+**English Description:** An "Advanced Search" module was added to the UI.
+
+## 主要改进 (Key Improvements)
+
+**中文描述:** 优化了数据处理流程，特定查询响应时间减少30%。
+**English Description:** Optimized data processing, reducing response time for specific queries by 30%.
+
+## 修复问题 (Bug Fixes)
+
+**中文描述:** 修复了文件名包含特殊字符时上传失败的问题 (Issue #123)。详细信息请参考原始链接。
+**English Description:** Fixed an issue with file uploads failing for names with special characters (Issue #123). Refer to the original link for details.
+
+## 近期发布 (Recent Releases)
+
+**[Release Name 1]** (Tag: `tag_name1`) - _发布者 (Published by): [author_login1] 于 (on) [YYYY-MM-DD]_
+
+**中文描述:** 此版本主要引入了对 OAuth 2.0 身份验证的支持，并修复了之前版本中报告的三个关键安全漏洞。详细的更新日志强调了对用户账户安全性的显著增强以及与其他第三方服务的集成流程简化。
+**English Description:** This release primarily introduces support for OAuth 2.0 authentication and fixes three critical security vulnerabilities reported in previous versions. The detailed changelog highlights significant enhancements to user account security and streamlined integration processes with other third-party services.
+
+(如果某个章节没有内容，例如没有新增功能，则该章节可以不在报告中出现。)

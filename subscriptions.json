@@ -1,0 +1,20 @@
+{
+    "github_subscriptions": [
+        {
+            "repo_url": "songquanpeng/one-api",
+            "last_processed_timestamp": null,
+            "custom_branch": null
+        },
+        {
+            "repo_url": "langgenius/dify",
+            "last_processed_timestamp": null,
+            "custom_branch": null
+        },
+        {
+            "repo_url": "deepseek-ai/DeepSeek-R1",
+            "last_processed_timestamp": null,
+            "custom_branch": null
+        }
+    ],
+    "hacker_news_subscriptions": []
+}

@@ -1,0 +1,12 @@
+{
+  "github_subscriptions": [
+    { "repo_url": "testowner1/testrepo1" },
+    { "repo_url": "https://github.com/testowner2/testrepo2" },
+    { "owner": "testowner3", "repo_name": "testrepo3" },
+    "testowner4/testrepo4",
+    { "repo_url": "https://github.com/testowner5/testrepo5/" },
+    { "repo_url": "invalidrepoonly" },
+    "invalidstring",
+    { "foo": "bar" }
+  ]
+}

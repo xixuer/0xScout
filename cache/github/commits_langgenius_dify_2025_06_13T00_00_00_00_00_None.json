@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "sha": "c05e47ebc0017caba71f1787a10523a96070a53f",
+      "node_id": "C_kwDOJVxJutoAKGMwNWU0N2ViYzAwMTdjYWJhNzFmMTc4N2ExMDUyM2E5NjA3MGE1M2Y",
+      "commit": {
+        "author": {
+          "name": "-LAN-",
+          "email": "laipz8200@outlook.com",
+          "date": "2025-06-13T01:42:02Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2025-06-13T01:42:02Z"
+        },
+        "message": "refactor(sqlalchemy_workflow_execution_repository): Use the max funtion for getting next_sequence_number. (#20966)",
+        "tree": {
+          "sha": "b212b93d8fa73a6abc6c0e2a71e61dbbe305bb45",
+          "url": "https://api.github.com/repos/langgenius/dify/git/trees/b212b93d8fa73a6abc6c0e2a71e61dbbe305bb45"
+        },
+        "url": "https://api.github.com/repos/langgenius/dify/git/commits/c05e47ebc0017caba71f1787a10523a96070a53f",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoS4HqCRC1aQ7uu5UhlAAAWlsQAEQeuq1dAgr9uG9lp/UmLkrf\n4GwrLaU8t1EkojNdlcWolKHpb4T9ZdmsLMTcGOwvoNh8Ao9XIrkKEjexGn4blsnu\n9gdQL+nBapXSlV0l8NhhYTmqj0W1wTqYkxwhIKozmctwnIDPklinM/nLDxfLkRnl\n9Huk6O09CvYIwLLyJt1uWD9tVxaxYozkCLruAr/dOZXfQN0SScePygS+zQCD6KEX\nsqs+XMn3/eS9ilV8n3qsyEgoIhFCA6qx8JwJyCOzZm2Jw/FjJURHXrfzJMMfaVAt\n4JbXemJoVwMgD7Wt+QUAnRbCjJgHwvBj3R/UASpDJflIy4nM1EV4O4rDx24CJP1R\n13xgAL1B9moaYIs8zuRaR+jhQ/tDd7JcdPQSEpKgAx21pWH3JT4Ds8RKKpu1IXOw\n6wQiIq9/bKTPmBrIhLUlkxkdwyqW8lq09y4s9YmDXHocVmgztet44we8a4ZHHbAQ\nsYDiFtaj4iGKDy6VtxPIUENHzoKBN6rWHQCoCdY6I51C5s7GIemRYjBf/t5J41gE\nN0BB/fljyOOpv5FryRH0Dx2H0JYlxVUqKaCtoZMfj77nAo2PPS4Fvf7iBA+Avg3q\ngrfYIL9z+9o8f4yIu0/8/vlqOlAT6Z6ceTIUH15jkskvd8DNNqhJ/wm8lcsGDgWT\niesd9m29/qexAm5L4613\n=V6YP\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree b212b93d8fa73a6abc6c0e2a71e61dbbe305bb45\nparent b2ac11bc47b77e4a2dede3799fe34cc15ce9deda\nauthor -LAN- <laipz8200@outlook.com> 1749778922 +0800\ncommitter GitHub <noreply@github.com> 1749778922 +0800\n\nrefactor(sqlalchemy_workflow_execution_repository): Use the max funtion for getting next_sequence_number. (#20966)\n\n",
+          "verified_at": "2025-06-13T01:42:06Z"
+        }
+      },
+      "url": "https://api.github.com/repos/langgenius/dify/commits/c05e47ebc0017caba71f1787a10523a96070a53f",
+      "html_url": "https://github.com/langgenius/dify/commit/c05e47ebc0017caba71f1787a10523a96070a53f",
+      "comments_url": "https://api.github.com/repos/langgenius/dify/commits/c05e47ebc0017caba71f1787a10523a96070a53f/comments",
+      "author": {
+        "login": "laipz8200",
+        "id": 16485841,
+        "node_id": "MDQ6VXNlcjE2NDg1ODQx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16485841?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/laipz8200",
+        "html_url": "https://github.com/laipz8200",
+        "followers_url": "https://api.github.com/users/laipz8200/followers",
+        "following_url": "https://api.github.com/users/laipz8200/following{/other_user}",
+        "gists_url": "https://api.github.com/users/laipz8200/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/laipz8200/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/laipz8200/subscriptions",
+        "organizations_url": "https://api.github.com/users/laipz8200/orgs",
+        "repos_url": "https://api.github.com/users/laipz8200/repos",
+        "events_url": "https://api.github.com/users/laipz8200/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/laipz8200/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b2ac11bc47b77e4a2dede3799fe34cc15ce9deda",
+          "url": "https://api.github.com/repos/langgenius/dify/commits/b2ac11bc47b77e4a2dede3799fe34cc15ce9deda",
+          "html_url": "https://github.com/langgenius/dify/commit/b2ac11bc47b77e4a2dede3799fe34cc15ce9deda"
+        }
+      ]
+    }
+  ],
+  "created_at": 1749792209.9005096,
+  "expires_at": 1749795809.9005098
+}

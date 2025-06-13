@@ -1,0 +1,24 @@
+{
+  "data": {
+    "by": "vitplister",
+    "descendants": 56,
+    "id": 44240770,
+    "kids": [
+      44243797,
+      44241780,
+      44241229,
+      44241911,
+      44244692,
+      44241466,
+      44242050,
+      44240978
+    ],
+    "score": 108,
+    "time": 1749585318,
+    "title": "Another Crack in the Chain of Trust: Uncovering (Yet Another) Secure Boot Bypass",
+    "type": "story",
+    "url": "https://www.binarly.io/blog/another-crack-in-the-chain-of-trust"
+  },
+  "created_at": 1749632426.544448,
+  "expires_at": 1749636026.544448
+}

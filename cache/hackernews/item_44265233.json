@@ -1,0 +1,25 @@
+{
+  "data": {
+    "by": "ibobev",
+    "descendants": 14,
+    "id": 44265233,
+    "kids": [
+      44265705,
+      44265522,
+      44265650,
+      44265567,
+      44265475,
+      44265506,
+      44265379,
+      44265580,
+      44265698
+    ],
+    "score": 73,
+    "time": 1749781644,
+    "title": "Rendering Crispy Text on the GPU",
+    "type": "story",
+    "url": "https://osor.io/text"
+  },
+  "created_at": 1749791400.7690313,
+  "expires_at": 1749795000.7690315
+}

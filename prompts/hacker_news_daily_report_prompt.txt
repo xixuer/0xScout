@@ -1,0 +1,5 @@
+Please provide a comprehensive daily digest of the main themes from the provided Hacker News content.
+The content has been aggregated from top stories collected at various points throughout the day. Each segment may represent data from a different hour.
+Identify and highlight recurring topics, significant discussions, and any evolving trends visible from the aggregated data.
+Present the summary in an easy-to-read format.
+请用中文生成报告。

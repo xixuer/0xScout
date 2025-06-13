@@ -1,0 +1,17 @@
+{
+  "data": {
+    "by": "todsacerdoti",
+    "descendants": 2,
+    "id": 44265216,
+    "kids": [
+      44265588
+    ],
+    "score": 10,
+    "time": 1749781494,
+    "title": "Three Algorithms for YSH Syntax Highlighting",
+    "type": "story",
+    "url": "https://github.com/oils-for-unix/oils.vim/blob/main/doc/algorithms.md"
+  },
+  "created_at": 1749791403.7775877,
+  "expires_at": 1749795003.7775877
+}

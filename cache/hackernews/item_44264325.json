@@ -1,0 +1,22 @@
+{
+  "data": {
+    "by": "johnnyApplePRNG",
+    "descendants": 8,
+    "id": 44264325,
+    "kids": [
+      44264699,
+      44264389,
+      44264374,
+      44264662,
+      44264623,
+      44264612
+    ],
+    "score": 6,
+    "text": "People have noticed for a while now that Google&#x27;s Bard&#x2F;Gemini has inserted random hindi&#x2F;bengali words often. [0]<p>I just caught this in an o3-pro thought process: &quot;and customizing for low difficulty. কাজ করছে!&quot;<p>That last set of chars is apparently Bengali for &quot;working!&quot;.<p>I just find it curious that similar &quot;errors&quot; are appearing from multiple different models... what is the training method or reasoning that these alternate languages can creep in, does anyone know?<p>[0] https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;Bard&#x2F;comments&#x2F;18zk2tb&#x2F;bard_speaking_random_languages&#x2F;",
+    "time": 1749771205,
+    "title": "Ask HN: Can anybody clarify why OpenAI reasoning now shows non-English thoughts?",
+    "type": "story"
+  },
+  "created_at": 1749776096.8250353,
+  "expires_at": 1749779696.8250356
+}

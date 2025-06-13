@@ -1,0 +1,40 @@
+{
+  "data": {
+    "by": "tsungxu",
+    "descendants": 92,
+    "id": 44241278,
+    "kids": [
+      44242625,
+      44241552,
+      44242414,
+      44241458,
+      44243031,
+      44242321,
+      44244065,
+      44241650,
+      44241279,
+      44241462,
+      44242486,
+      44241474,
+      44243027,
+      44243367,
+      44242317,
+      44242478,
+      44244749,
+      44241878,
+      44242570,
+      44242173,
+      44241450,
+      44244009,
+      44241757
+    ],
+    "score": 279,
+    "text": "I made this 130 mile capable VTOL drone in only 90 days. It can fly for 3 hours on a single charge. That would make it one of the longest range and endurance 3D printed VTOLs in the world.<p>This is the thing I&#x27;m most proud of building to date!<p>Before this project, I was a total CAD, 3D printing and aerodynamic modeling beginner. I had only built and flown one VTOL before.<p>SPECS<p>Wingspan: 3.9 ft (1200 mm)\nLength: 2.5 ft (770 mm)\nWeight: 5.6 lb (2.55kg)<p>Airframe: foaming PLA (Bambu PLA-Aero) and PETG structural parts printed on A1 printer, CFRP booms and spars<p>Battery: Li-ion silicon anode Amprius SA08 cells, 6s2p pack by Upgrade Energy\nMotors: 2807 AOS for lift and cruise (unoptimized)\nLifting ESCs: 4 in 1 Holybro Tekko32 F4 45A \nCruise ESC: Flycolor Raptor 5 45A\nLifting and cruise props: 7042 Gemfan (unoptimized)<p>Flight controller: Speedybee F405 Wing\nGPS: M10<p>Firmware: Ardupilot 4.6.0<p>---<p>This video edit ended up shorter than I planned. Being my first Youtube video with significant post production effort, I underestimated the work required to make a longer in-depth video with voiceover, edited footage, etc.",
+    "time": 1749588431,
+    "title": "Show HN: I made a 3D printed VTOL drone",
+    "type": "story",
+    "url": "https://www.tsungxu.com/p/i-made-a-3d-printed-vtol-that-can"
+  },
+  "created_at": 1749633338.9456828,
+  "expires_at": 1749636938.945683
+}

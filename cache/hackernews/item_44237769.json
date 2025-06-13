@@ -1,0 +1,25 @@
+{
+  "data": {
+    "by": "arcb",
+    "descendants": 19,
+    "id": 44237769,
+    "kids": [
+      44237991,
+      44244711,
+      44244995,
+      44238634,
+      44239604,
+      44239573,
+      44239681,
+      44244861,
+      44243982
+    ],
+    "score": 49,
+    "text": "Hi HN! We’re Connor and Ambar, and we’re working on BitBoard (<a href=\"https:&#x2F;&#x2F;bitboard.work\">https:&#x2F;&#x2F;bitboard.work</a>). We build AI agents that handle repetitive administrative tasks in healthcare clinics like filling out intake forms, prepping charts, or managing referrals.<p>We were early employees at Forward, which provided primary care across the US. To scale this, we relied on thousands of remote contractors to do repetitive administrative work like reconciling patient records, and scheduling follow-ups based on care plans. It was a huge bottleneck—expensive, error-prone, and always pulling attention away from clinical care. Our software solutions were always too brittle, never managing to handle the variance of clinical data we oversaw.<p>AI, when applied well, is capable of performing a lot of the tasks we manually did. So we decided to take another crack at the problem by building today what we would have liked to have back then, and to help clinics use it.<p>Clinics send us their SOPs (Standard Operating Procedures—for example, “prep a patient chart from these records before a visit”), and we turn them into AI agents that do the work. These agents act like remote contractors: they log into EHRs, navigate internal tools, and do the work in the background. Unlike classical RPA, we build in verification and deterministic checks, so customers can confirm it was done right. \nUnlike low-code tools, there’s nothing new to learn. Customers don’t have to touch a UI or maintain logic. They just hand us the task, and we do it. Clinicians don’t want more screens! They erode attention and cause weird bottlenecks in operations because someone has to drive them. Our product is built to address this.<p>Here’s a demo video: <a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=t_tQ0fYo85g\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=t_tQ0fYo85g</a>. We’re not self-serve yet, but we deploy with customers in days after onboarding them. We’re working on speeding that up.<p>One of our early customers is a fast-growing obesity medicine group. Their MAs were spending 15 to 20 minutes per patient just entering intake form data into the EHR. That one task was taking up 30% of their MA time. We took it over in a week. It’s now fully automated, and they’ve cleared the backlog and sped up visits.<p>A few technical problems are specifically relevant to building healthcare agents:<p>- Unreliable interfaces: many EHRs and clinic tools don’t follow modern web standards, making automation brittle. We’ve forked browser-use to solve some of these challenges. We’re working on analogous infrastructure to let agents operate on desktops and across a wide range of APIs.<p>- Verification: in healthcare, tasks need to be provably correct. We embed deterministic checks into each workflow so agents can confirm the task was completed as expected and the output is accurate.<p>- Workflow generation: clinic SOPs are written in natural language and vary widely, yet still describe the actual process that works for clinics.<p>We charge per task, based on complexity. We’re HIPAA compliant, audit-logged, and operate in a zero-retention environment unless auditing requires otherwise.<p>A meaningful part is building trust in a high-stakes environment like healthcare. Part of that is making the product reliable. But another educational part is learning how to introduce a new concept like “agents” to clinics. We’re working on the right ways to describe them, to onboard them, to measure them. Endearingly, one of our customers’ agents is named “Robert Ott”, and they refer to him by name in their weekly updates like he’s a member of the team :) We’re learning a lot and have a long way to go.<p>We’d love to meet other folks who 1. work in medical groups or health systems and want to offload repetitive work, and 2. are building in this space and want to trade notes. We’re happy to share everything we’ve learned so far.<p>And this is a big space, with a lot of learnings from personal stories, from clinicians, technologists, administrators, and more. What do you make of it? We’d love to hear from you.",
+    "time": 1749568170,
+    "title": "Launch HN: BitBoard (YC X25) – AI agents for healthcare back-offices",
+    "type": "story"
+  },
+  "created_at": 1749632427.4352322,
+  "expires_at": 1749636027.4352324
+}

@@ -1,0 +1,32 @@
+{
+  "data": {
+    "by": "azhenley",
+    "descendants": 32,
+    "id": 44259476,
+    "kids": [
+      44260460,
+      44260882,
+      44264096,
+      44259962,
+      44262237,
+      44261126,
+      44262119,
+      44261525,
+      44262630,
+      44259685,
+      44261689,
+      44261641,
+      44262755,
+      44264585,
+      44263850,
+      44260062
+    ],
+    "score": 95,
+    "time": 1749745081,
+    "title": "Solving LinkedIn Queens with SMT",
+    "type": "story",
+    "url": "https://buttondown.com/hillelwayne/archive/solving-linkedin-queens-with-smt/"
+  },
+  "created_at": 1749791407.9803212,
+  "expires_at": 1749795007.9803216
+}

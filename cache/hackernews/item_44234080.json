@@ -1,0 +1,34 @@
+{
+  "data": {
+    "by": "mellosouls",
+    "descendants": 131,
+    "id": 44234080,
+    "kids": [
+      44260340,
+      44260174,
+      44260746,
+      44264462,
+      44259919,
+      44260381,
+      44260530,
+      44264266,
+      44264588,
+      44259607,
+      44260947,
+      44260229,
+      44260107,
+      44262802,
+      44262692,
+      44260606,
+      44259224,
+      44260178
+    ],
+    "score": 184,
+    "time": 1749543884,
+    "title": "Rust compiler performance",
+    "type": "story",
+    "url": "https://kobzol.github.io/rust/rustc/2025/06/09/why-doesnt-rust-care-more-about-compiler-performance.html"
+  },
+  "created_at": 1749791407.1091273,
+  "expires_at": 1749795007.1091273
+}

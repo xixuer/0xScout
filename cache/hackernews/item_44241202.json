@@ -1,0 +1,22 @@
+{
+  "data": {
+    "by": "codekarate",
+    "descendants": 11,
+    "id": 44241202,
+    "kids": [
+      44244855,
+      44243783,
+      44242555,
+      44243350,
+      44242154
+    ],
+    "score": 141,
+    "text": "We wanted to build a course for new Mastra devs to get started quickly. However, we knew videos would go out of date and be more difficult to maintain.<p>We decided to launch our &quot;course&quot; as an MCP server. This way your coding agent actually teaches the course content to you and can help you write the code. We think this is a really interactive way to learn.<p>Using an editor with MCP support (such as Cursor, Windsurf, or VSCode), your code agent will call the appropriate MCP tools which will return context for the agent. This context tries to instruct the agent that it should be teaching you the content, not just doing the work for you.<p>The course is still pretty experimental and some models work better than others. Code is available in the Mastra Github repo in the mcp-docs-server package (<a href=\"https:&#x2F;&#x2F;github.com&#x2F;mastra-ai&#x2F;mastra&#x2F;tree&#x2F;main&#x2F;packages&#x2F;mcp-docs-server\">https:&#x2F;&#x2F;github.com&#x2F;mastra-ai&#x2F;mastra&#x2F;tree&#x2F;main&#x2F;packages&#x2F;mcp-d...</a>)",
+    "time": 1749587815,
+    "title": "Show HN: A “Course” as an MCP Server",
+    "type": "story",
+    "url": "https://mastra.ai/course"
+  },
+  "created_at": 1749632424.7898774,
+  "expires_at": 1749636024.7898777
+}

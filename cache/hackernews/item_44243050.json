@@ -1,0 +1,40 @@
+{
+  "data": {
+    "by": "gpi",
+    "descendants": 125,
+    "id": 44243050,
+    "kids": [
+      44244334,
+      44244251,
+      44243682,
+      44245174,
+      44244361,
+      44243799,
+      44243822,
+      44244716,
+      44243545,
+      44244791,
+      44245190,
+      44244185,
+      44243530,
+      44244859,
+      44244748,
+      44244715,
+      44244180,
+      44244041,
+      44243504,
+      44244357,
+      44243554,
+      44243253,
+      44245134,
+      44244751
+    ],
+    "score": 191,
+    "time": 1749602095,
+    "title": "It's the end of observability as we know it (and I feel fine)",
+    "type": "story",
+    "url": "https://www.honeycomb.io/blog/its-the-end-of-observability-as-we-know-it-and-i-feel-fine"
+  },
+  "created_at": 1749633340.335937,
+  "expires_at": 1749636940.335937
+}

@@ -1,0 +1,252 @@
+{
+  "data": [
+    {
+      "sha": "acb2488fc8f9ba66cea5a4d99571a9f2eeb862b1",
+      "node_id": "C_kwDOJVxJutoAKGFjYjI0ODhmYzhmOWJhNjZjZWE1YTRkOTk1NzFhOWYyZWViODYyYjE",
+      "commit": {
+        "author": {
+          "name": "-LAN-",
+          "email": "laipz8200@outlook.com",
+          "date": "2025-06-11T08:28:36Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2025-06-11T08:28:36Z"
+        },
+        "message": "chore(package): Bump version to 1.4.2 (#20897)\n\nSigned-off-by: -LAN- <laipz8200@outlook.com>",
+        "tree": {
+          "sha": "c81dd4469b1f9452ebabca1a23bab3c7525275d1",
+          "url": "https://api.github.com/repos/langgenius/dify/git/trees/c81dd4469b1f9452ebabca1a23bab3c7525275d1"
+        },
+        "url": "https://api.github.com/repos/langgenius/dify/git/commits/acb2488fc8f9ba66cea5a4d99571a9f2eeb862b1",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoST40CRC1aQ7uu5UhlAAADU4QAHM2gVt2kq5Qt8ed3zQrVzUS\nup6CJUaPdUl/nPCAQJHLM3MyXVO7OHZpbmO064nftoNPPV6kr2m857sl67az0bTx\nloejOSijfFC/4cQd3ZJ/OB6pEWlPBY/8pwhyH6K0vF0kHvkHnH/tgv5RBbkDECdp\n3BM2lgTt4RTJajmk5Dfo/5eyCULEn387ZRo9G8muBEMZUsf7P6cy8obNq6pbDMhZ\nmn4LD2JhTOJqThRMmOSBUHnUuNAhFDsRuPOKshAa9ZpBKoqN7oECbVz9jRyc9A42\nWyAqM0u6QOBhB7Dgj6oYi1GA0AuZJW2LrhtgXCOAEjV/VIYU3IrrH0VxHEUvHUn+\nkhDqRfQ442h/TzqPm8At9OeA0x5hdpy3JC1FHkAPqxP0cKi1sDMD0fn6VzIFt7Zk\nJ5N9I15WhfhJkCIPPV6gJdJuOL56XFBq3WtQTpHXPF2DL9O5qA17IjS0U6hYFn2V\nVpHp/b7bq6rOUThb1WC1HwM1H/HjrbBCz61o40oWT/bIPaMqqeZvPd/Z+JjKV2Cf\na1Lta5wvKRvKV7hQDnNRyW6SnXENJRHkhzCBF3+SvVYHVwh4hSEsnzXPdFLIfCjr\nCNlThkrkI1InUpeO3Gyk2CWOe60bwk4gQtDuWXWh0XhokmJjTGlZCMPHA686az5z\nAwUWdYjuF+kuQYua7ti4\n=P6K3\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree c81dd4469b1f9452ebabca1a23bab3c7525275d1\nparent d6d8cca053b074b17ea754821e9a52121102218d\nauthor -LAN- <laipz8200@outlook.com> 1749630516 +0800\ncommitter GitHub <noreply@github.com> 1749630516 +0800\n\nchore(package): Bump version to 1.4.2 (#20897)\n\nSigned-off-by: -LAN- <laipz8200@outlook.com>",
+          "verified_at": "2025-06-11T08:28:38Z"
+        }
+      },
+      "url": "https://api.github.com/repos/langgenius/dify/commits/acb2488fc8f9ba66cea5a4d99571a9f2eeb862b1",
+      "html_url": "https://github.com/langgenius/dify/commit/acb2488fc8f9ba66cea5a4d99571a9f2eeb862b1",
+      "comments_url": "https://api.github.com/repos/langgenius/dify/commits/acb2488fc8f9ba66cea5a4d99571a9f2eeb862b1/comments",
+      "author": {
+        "login": "laipz8200",
+        "id": 16485841,
+        "node_id": "MDQ6VXNlcjE2NDg1ODQx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16485841?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/laipz8200",
+        "html_url": "https://github.com/laipz8200",
+        "followers_url": "https://api.github.com/users/laipz8200/followers",
+        "following_url": "https://api.github.com/users/laipz8200/following{/other_user}",
+        "gists_url": "https://api.github.com/users/laipz8200/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/laipz8200/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/laipz8200/subscriptions",
+        "organizations_url": "https://api.github.com/users/laipz8200/orgs",
+        "repos_url": "https://api.github.com/users/laipz8200/repos",
+        "events_url": "https://api.github.com/users/laipz8200/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/laipz8200/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "d6d8cca053b074b17ea754821e9a52121102218d",
+          "url": "https://api.github.com/repos/langgenius/dify/commits/d6d8cca053b074b17ea754821e9a52121102218d",
+          "html_url": "https://github.com/langgenius/dify/commit/d6d8cca053b074b17ea754821e9a52121102218d"
+        }
+      ]
+    },
+    {
+      "sha": "d6d8cca053b074b17ea754821e9a52121102218d",
+      "node_id": "C_kwDOJVxJutoAKGQ2ZDhjY2EwNTNiMDc0YjE3ZWE3NTQ4MjFlOWE1MjEyMTEwMjIxOGQ",
+      "commit": {
+        "author": {
+          "name": "Yeuoly",
+          "email": "45712896+Yeuoly@users.noreply.github.com",
+          "date": "2025-06-11T08:01:50Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2025-06-11T08:01:50Z"
+        },
+        "message": "refactor: replace compact response generation with length-prefixed response for backwards invocation api (#20903)",
+        "tree": {
+          "sha": "6dc0793aeee7d2f3387e829242cb503922983265",
+          "url": "https://api.github.com/repos/langgenius/dify/git/trees/6dc0793aeee7d2f3387e829242cb503922983265"
+        },
+        "url": "https://api.github.com/repos/langgenius/dify/git/commits/d6d8cca053b074b17ea754821e9a52121102218d",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoSTfuCRC1aQ7uu5UhlAAANKQQAHaN2INPNehsLw1bveyX2BCS\nOlBPWOqt/JL0kCu/cf19oFr2W2kN5PKjjCHuYJSxYIFbyk1bjcaq8gJyRJHSHTie\n5cqLlp2fHKOmqSgL8/ifDIMyRCUqYczKGuplEzlwHJZnqkybPTMzakdRcpZ8hOHS\nCQqotCpP20LmmKx0qhs8aqUSFfS7NNCXGLuoV5tYPxNND5+IFnOxCPlgoiWkNhzu\nTdNtt8V1Ji1Y1gI+F4jw7JYEoQu6/Arf4msToTBDZo0akmBgyZ16/Ui9dfRpxwup\nty6wba8PsP3NzruvjT6GSy5pBBzA2P0y9TIp4FG4H7BWIi+/g4DHRRX9y5W/zCsA\nR3IJLjt713ubcXtax5C3QCaV1yDAu8LxFdnBr3OpksH3paLM1aNA9yYfVbV3SMX/\ndDfVrrPtR35PIx8Gcp3YvLkjjOjXJ90Dj2IpbUJE118VIBIV494FUGc1NrHHF9zZ\n4u9aI1eTTnfsqLQU24PW/lB1KzA5Svd/iUDt1QjFP+ZMDjzMBiVzWqYs3JUdJh0i\nlnSXiLuR/ssRFhB6FAi8UQ6Adq6XtkDLkeKx3Fa2GWg1lo34B2ftjCW8OQXunFLY\nHSaXED4IYDaD8T7NVD+p6Opkq/SaR5rMQRH0p5ensz8aOwqGS9p5rdPcvK/jXM4g\ndHfEt5orjvOnf3sW6GJ4\n=yAMD\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 6dc0793aeee7d2f3387e829242cb503922983265\nparent f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d\nauthor Yeuoly <45712896+Yeuoly@users.noreply.github.com> 1749628910 +0800\ncommitter GitHub <noreply@github.com> 1749628910 +0800\n\nrefactor: replace compact response generation with length-prefixed response for backwards invocation api (#20903)\n\n",
+          "verified_at": "2025-06-11T08:01:54Z"
+        }
+      },
+      "url": "https://api.github.com/repos/langgenius/dify/commits/d6d8cca053b074b17ea754821e9a52121102218d",
+      "html_url": "https://github.com/langgenius/dify/commit/d6d8cca053b074b17ea754821e9a52121102218d",
+      "comments_url": "https://api.github.com/repos/langgenius/dify/commits/d6d8cca053b074b17ea754821e9a52121102218d/comments",
+      "author": {
+        "login": "Yeuoly",
+        "id": 45712896,
+        "node_id": "MDQ6VXNlcjQ1NzEyODk2",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45712896?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Yeuoly",
+        "html_url": "https://github.com/Yeuoly",
+        "followers_url": "https://api.github.com/users/Yeuoly/followers",
+        "following_url": "https://api.github.com/users/Yeuoly/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Yeuoly/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Yeuoly/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Yeuoly/subscriptions",
+        "organizations_url": "https://api.github.com/users/Yeuoly/orgs",
+        "repos_url": "https://api.github.com/users/Yeuoly/repos",
+        "events_url": "https://api.github.com/users/Yeuoly/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Yeuoly/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d",
+          "url": "https://api.github.com/repos/langgenius/dify/commits/f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d",
+          "html_url": "https://github.com/langgenius/dify/commit/f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d"
+        }
+      ]
+    },
+    {
+      "sha": "f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d",
+      "node_id": "C_kwDOJVxJutoAKGY2MDEwOTNjY2MwN2QxZThjMWQzYjkxNTcyYWQ5YjRjNzBlZjBiM2Q",
+      "commit": {
+        "author": {
+          "name": "非法操作",
+          "email": "hjlarry@163.com",
+          "date": "2025-06-11T07:38:51Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2025-06-11T07:38:51Z"
+        },
+        "message": "fix: only enterprise version request app access mode (#20785)",
+        "tree": {
+          "sha": "1fa79cb57d17997d0990f35c3807017d8522dab0",
+          "url": "https://api.github.com/repos/langgenius/dify/git/trees/1fa79cb57d17997d0990f35c3807017d8522dab0"
+        },
+        "url": "https://api.github.com/repos/langgenius/dify/git/commits/f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJoSTKLCRC1aQ7uu5UhlAAAGccQAKywWdZUsZmM+bk1+ssLsTNd\ntEQLjtKktGZpLmQrrvy1P8IOJDvXLsqPtsniObDQ+BcjUA07E9AxBZsAOAQqwGoB\nukvhRD3dnv+8xdwEzyUNUFsxV10OZfmgeIPfLNaFrUYzaR8VTMIX60qiUzzg52hz\nDEFfvBk0d62kd0UB8baOu8UOycbHbIvDzgWSOPOsRuiBwxCRI6c3z7iFe3MeS9nQ\nXRFhxJfiKtqt567kYfOKC80lkxWLAerSrYug7cibibCd022+s3R4jv+B744M8JJI\nApqsC54bCYQav7LsFj3OOHX91bY92HDgVRNdNCpiJOdt8DtbxIiYwoFvPisK9hur\nrZV13Kao4rshnPDMwZdEmpVGOOp/VTOl6iH4k48LbnI3hypUGVKpkJdx4O6se7U0\nodMJikmBmTbfLx5tMZRgDLvxg/0Nrb9A+AKWD8kLDsPRSSrof+fzLl7Uz/6Uqak8\nmzInLoyBqr3Ii7DkCj51tcXTW/flPQmFWQZBtqmVwMOmzB/evJddbtbaj2MyJkNd\nKtvFeQd8u7gtjcBHv0Yp06RYapP2dOw93vEr65M+wibnPev20fCRyhG+uUS88tW9\nleP0gVntS0aPqZQ7g8jKBNpeisYrPfKaFqK/JQ8PCseqlapzLqQf1yLKV+J0GkuO\nyZJyXL+wj6Hl4nGDictO\n=JDUx\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 1fa79cb57d17997d0990f35c3807017d8522dab0\nparent 0f3d4d0b6e65bcf1892316f1b6e4274e24f80e71\nauthor 非法操作 <hjlarry@163.com> 1749627531 +0800\ncommitter GitHub <noreply@github.com> 1749627531 +0800\n\nfix: only enterprise version request app access mode (#20785)\n\n",
+          "verified_at": "2025-06-11T07:38:55Z"
+        }
+      },
+      "url": "https://api.github.com/repos/langgenius/dify/commits/f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d",
+      "html_url": "https://github.com/langgenius/dify/commit/f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d",
+      "comments_url": "https://api.github.com/repos/langgenius/dify/commits/f601093ccc07d1e8c1d3b91572ad9b4c70ef0b3d/comments",
+      "author": {
+        "login": "hjlarry",
+        "id": 25834719,
+        "node_id": "MDQ6VXNlcjI1ODM0NzE5",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25834719?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/hjlarry",
+        "html_url": "https://github.com/hjlarry",
+        "followers_url": "https://api.github.com/users/hjlarry/followers",
+        "following_url": "https://api.github.com/users/hjlarry/following{/other_user}",
+        "gists_url": "https://api.github.com/users/hjlarry/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/hjlarry/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/hjlarry/subscriptions",
+        "organizations_url": "https://api.github.com/users/hjlarry/orgs",
+        "repos_url": "https://api.github.com/users/hjlarry/repos",
+        "events_url": "https://api.github.com/users/hjlarry/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/hjlarry/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "0f3d4d0b6e65bcf1892316f1b6e4274e24f80e71",
+          "url": "https://api.github.com/repos/langgenius/dify/commits/0f3d4d0b6e65bcf1892316f1b6e4274e24f80e71",
+          "html_url": "https://github.com/langgenius/dify/commit/0f3d4d0b6e65bcf1892316f1b6e4274e24f80e71"
+        }
+      ]
+    }
+  ],
+  "created_at": 1749631038.4886773,
+  "expires_at": 1749634638.4886773
+}

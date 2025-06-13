@@ -1,0 +1,97 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  Network URL: http://10.1.155.2:8502
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.1.155.2:8501
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.1.155.2:8503
+
+2025-06-09 10:25:59 | INFO | llm:__init__:14 - LLM.__init__ called.
+2025-06-09 10:25:59 | DEBUG | llm:__init__:28 - LLM.__init__: Raw model_type from settings: 'openai'
+2025-06-09 10:25:59 | INFO | llm:__init__:36 - LLM.__init__: Effective model_type set to: 'openai'
+2025-06-09 10:25:59 | DEBUG | llm:__init__:43 - LLM.__init__: About to check effective model_type ('openai') for client setup.
+2025-06-09 10:25:59 | INFO | llm:__init__:45 - LLM.__init__: model_type is 'openai'. Proceeding with OpenAI client setup.
+2025-06-09 10:25:59 | DEBUG | llm:__init__:62 - 尝试创建自定义 httpx.Client (trust_env=False, proxies=None)...
+2025-06-09 10:25:59 | DEBUG | llm:__init__:65 - 自定义 httpx.Client 创建成功并已添加到 client_params。
+2025-06-09 10:25:59 | DEBUG | llm:__init__:72 - 准备初始化 OpenAI 客户端，参数 (可能包含自定义http_client): {'api_key': 'AIzaSyC9CkysgFzWrBi74ZoOwI8eK4PwPN3royM', 'base_url': 'https://api-proxy.me/gemini/v1beta/openai', 'http_client': 'Client'}
+2025-06-09 10:25:59 | DEBUG | llm:__init__:81 - OpenAI API Key (for client init): AIzaS...royM
+2025-06-09 10:25:59 | DEBUG | llm:__init__:82 - OpenAI Base URL (for client init): https://api-proxy.me/gemini/v1beta/openai
+2025-06-09 10:25:59 | DEBUG | llm:__init__:86 - 尝试调用 OpenAI(**client_params)...
+2025-06-09 10:25:59 | INFO | llm:__init__:90 - OpenAI() 调用成功返回。返回对象类型: <class 'openai.OpenAI'>。
+2025-06-09 10:25:59 | INFO | llm:__init__:92 - self.client 已被设置为 OpenAI 客户端实例。类型: <class 'openai.OpenAI'>
+2025-06-09 10:25:59 | DEBUG | report_generator:_preload_prompts:25 - Preloading prompts...
+2025-06-09 10:25:59 | INFO | report_generator:_preload_prompts:37 - Attempting to load prompts for report types: ['hacker_news_hours_topic', 'github', 'github_digest', 'hacker_news_daily_report']
+2025-06-09 10:25:59 | DEBUG | report_generator:_preload_prompts:69 - Successfully loaded prompt for 'hacker_news_hours_topic' using general LLM type key 'hacker_news_hours_topic_openai' from /root/0xScout/prompts/hacker_news_hours_topic_openai_prompt.txt
+2025-06-09 10:25:59 | DEBUG | report_generator:_preload_prompts:69 - Successfully loaded prompt for 'github' using general LLM type key 'github_openai' from /root/0xScout/prompts/github_openai_prompt.txt
+2025-06-09 10:25:59 | DEBUG | report_generator:_preload_prompts:69 - Successfully loaded prompt for 'github_digest' using general LLM type key 'github_digest_openai' from /root/0xScout/prompts/github_prompt.txt
+2025-06-09 10:25:59 | DEBUG | report_generator:_preload_prompts:69 - Successfully loaded prompt for 'hacker_news_daily_report' using general LLM type key 'hacker_news_daily_report_openai' from /root/0xScout/prompts/hacker_news_daily_report_openai_prompt.txt
+2025-06-09 10:25:59 | INFO | report_generator:_preload_prompts:98 - Prompts loaded for types: ['hacker_news_hours_topic', 'github', 'github_digest', 'hacker_news_daily_report']
+2025-06-09 10:25:59 | INFO | streamlit_app:display_report_generation_ui:816 - Test Email: Generating Hacker News Daily Summary...
+2025-06-09 10:25:59 | DEBUG | report_generator:get_hacker_news_daily_summary:573 - Attempting to generate Hacker News daily summary for date: 2025-06-09
+2025-06-09 10:25:59 | INFO | report_generator:_aggregate_hourly_hn_data:220 - Attempting to aggregate Hacker News data for date: 2025-06-09 from directory: hacker_news/2025-06-09
+2025-06-09 10:25:59 | WARNING | report_generator:_aggregate_hourly_hn_data:223 - Data directory hacker_news/2025-06-09 not found for Hacker News aggregation.
+2025-06-09 10:25:59 | INFO | report_generator:get_hacker_news_daily_summary:624 - No meaningful aggregated Hacker News data for 2025-06-09 (or content was '注意：未找到日期 2025-06-09 的Hacker News聚合数据目录。...'). Attempting to fetch live stories.
+2025-06-09 10:25:59 | DEBUG | hacker_news_client:fetch_top_stories:12 - 准备获取Hacker News的热门新闻。
+2025-06-09 10:26:00 | DEBUG | hacker_news_client:parse_stories:23 - 解析Hacker News的HTML内容。
+2025-06-09 10:26:00 | INFO | hacker_news_client:parse_stories:35 - 成功解析 30 条Hacker News新闻。
+2025-06-09 10:26:00 | DEBUG | report_generator:get_hacker_news_daily_summary:640 - Formatted live stories for LLM: # Live Hacker News Top Stories (2025-06-09)
+
+1. [Why Android can't use CDC Ethernet (2023)](https://jordemort.dev/blog/why-android-cant-use-cdc-ethernet/)
+2. [Riding high in Germany on the world's oldest suspended railway](https://www.theguardian.com/travel/2025/jun/09/riding-high-in-germany-on-the-worlds-oldest-suspended-railway)
+3. [Omnimax](https://computer.rip/2025-06-08-Omnimax.html)
+4. [Tracking Copilot vs. Codex vs. Cursor vs. Devin PR Performance](https://aavetis.github.io/ai-pr-watcher/...
+2025-06-09 10:26:00 | WARNING | report_generator:get_hacker_news_daily_summary:649 - Prompt for 'hacker_news_daily_report' (live data) is a string. Using it as system prompt and a generic user prompt template.
+2025-06-09 10:26:00 | INFO | llm:_generate_report_openai:153 - 使用 OpenAI gemini-2.5-flash-preview-05-20 模型流式生成报告 (Base URL: https://api-proxy.me/gemini/v1beta/openai)。
+2025-06-09 10:26:32 | INFO | report_generator:get_hacker_news_daily_summary:665 - Successfully generated and yielded summary from live HN data for 2025-06-09.
+2025-06-09 10:26:32 | INFO | streamlit_app:display_report_generation_ui:828 - Test Email: Hacker News Daily Summary generated.
+2025-06-09 10:26:32 | INFO | streamlit_app:display_report_generation_ui:836 - Test Email: Generating Consolidated GitHub Report (days=1)...
+2025-06-09 10:26:32 | INFO | report_generator:get_consolidated_github_report_for_email:411 - Starting generation of consolidated GitHub report for email (last 1 days).
+2025-06-09 10:26:32 | DEBUG | report_generator:get_consolidated_github_report_for_email:423 - Found 2 GitHub subscriptions: [{'repo_url': 'songquanpeng/one-api', 'last_processed_timestamp': None, 'custom_branch': None}, {'repo_url': 'langgenius/dify', 'last_processed_timestamp': None, 'custom_branch': None}]
+2025-06-09 10:26:32 | INFO | report_generator:get_consolidated_github_report_for_email:453 - Generating report for songquanpeng/one-api...
+2025-06-09 10:26:32 | INFO | report_generator:generate_github_project_report:278 - 准备为 songquanpeng/one-api 生成项目报告 (过去 1 天)...
+2025-06-09 10:26:32 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:163 - Fetching updates for songquanpeng/one-api for the period 2025-06-09 to 2025-06-09 (API 'since': 2025-06-09T00:00:00+00:00)
+2025-06-09 10:26:32 | DEBUG | github_client:fetch_commits:24 - 准备获取 songquanpeng/one-api 的 Commits
+2025-06-09 10:26:33 | DEBUG | github_client:fetch_issues:46 - 准备获取 songquanpeng/one-api 的 Issues。
+2025-06-09 10:26:34 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 songquanpeng/one-api 的 Pull Requests。
+2025-06-09 10:26:36 | DEBUG | github_client:get_recent_releases:94 - 准备获取 songquanpeng/one-api 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-09 10:26:37 | INFO | github_client:get_recent_releases:154 - songquanpeng/one-api 在过去 1 天内没有符合条件的 Releases。
+2025-06-09 10:26:37 | DEBUG | report_generator:generate_github_project_report:287 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-09 10:26:37 | DEBUG | report_generator:generate_github_project_report:306 - 使用 LLM 为 songquanpeng/one-api 生成摘要报告。
+2025-06-09 10:26:37 | INFO | llm:_generate_report_openai:153 - 使用 OpenAI gemini-2.5-flash-preview-05-20 模型流式生成报告 (Base URL: https://api-proxy.me/gemini/v1beta/openai)。
+2025-06-09 10:26:46 | INFO | report_generator:get_consolidated_github_report_for_email:453 - Generating report for langgenius/dify...
+2025-06-09 10:26:46 | INFO | report_generator:generate_github_project_report:278 - 准备为 langgenius/dify 生成项目报告 (过去 1 天)...
+2025-06-09 10:26:46 | DEBUG | report_generator:_generate_github_project_basic_info_markdown:163 - Fetching updates for langgenius/dify for the period 2025-06-09 to 2025-06-09 (API 'since': 2025-06-09T00:00:00+00:00)
+2025-06-09 10:26:46 | DEBUG | github_client:fetch_commits:24 - 准备获取 langgenius/dify 的 Commits
+2025-06-09 10:26:47 | DEBUG | github_client:fetch_issues:46 - 准备获取 langgenius/dify 的 Issues。
+2025-06-09 10:26:48 | DEBUG | github_client:fetch_pull_requests:63 - 准备获取 langgenius/dify 的 Pull Requests。
+2025-06-09 10:26:50 | DEBUG | github_client:get_recent_releases:94 - 准备获取 langgenius/dify 的最新 Releases (最近 1 天, 最多 5 条)
+2025-06-09 10:26:51 | INFO | github_client:get_recent_releases:154 - langgenius/dify 在过去 1 天内没有符合条件的 Releases。
+2025-06-09 10:26:51 | DEBUG | report_generator:generate_github_project_report:287 - 使用 LLM 为 langgenius/dify 生成摘要报告。
+2025-06-09 10:26:51 | DEBUG | report_generator:generate_github_project_report:306 - 使用 LLM 为 langgenius/dify 生成摘要报告。
+2025-06-09 10:26:51 | INFO | llm:_generate_report_openai:153 - 使用 OpenAI gemini-2.5-flash-preview-05-20 模型流式生成报告 (Base URL: https://api-proxy.me/gemini/v1beta/openai)。
+2025-06-09 10:27:03 | INFO | report_generator:get_consolidated_github_report_for_email:477 - Consolidated GitHub report for email generated successfully.
+2025-06-09 10:27:03 | INFO | streamlit_app:display_report_generation_ui:842 - Test Email: Consolidated GitHub Report generated.
+2025-06-09 10:27:03 | INFO | streamlit_app:display_report_generation_ui:860 - Test Email: Sending combined report...
+2025-06-09 10:27:03 | INFO | notifier:send_email:53 - 准备发送邮件: [测试邮件] 每日摘要: HN资讯 & GitHub仓库动态 (2025-06-09)
+2025-06-09 10:27:03 | INFO | notifier:send_email:90 - Attempting to send email via smtp.qq.com:465
+2025-06-09 10:27:03 | DEBUG | notifier:send_email:91 - From: 1186195204@qq.com, To: ['2057479055@qq.com'], Subject: [测试邮件] 每日摘要: HN资讯 & GitHub仓库动态 (2025-06-09)
+2025-06-09 10:27:03 | INFO | notifier:send_email:100 - Using SMTP_SSL on port 465
+2025-06-09 10:27:03 | DEBUG | notifier:send_email:107 - Logging in with username: 1186195204@qq.com
+2025-06-09 10:27:03 | DEBUG | notifier:send_email:112 - Sending email to: ['2057479055@qq.com']
+2025-06-09 10:27:04 | INFO | notifier:send_email:114 - 邮件发送成功！
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8504
+  Network URL: http://10.1.155.2:8504
+

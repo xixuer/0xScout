@@ -1,0 +1,19 @@
+{
+  "data": {
+    "by": "piyushgupta53",
+    "descendants": 4,
+    "id": 44265851,
+    "kids": [
+      44265930,
+      44265915
+    ],
+    "score": 21,
+    "text": "I picked up programming in late 2023 and been enjoying it now. Wanted to challenge myself and set a stretch goal, so set out to build a bittorrent client.",
+    "time": 1749791285,
+    "title": "Show HN: I wrote a BitTorrent Client from scratch",
+    "type": "story",
+    "url": "https://github.com/piyushgupta53/go-torrent-client"
+  },
+  "created_at": 1749792818.6664608,
+  "expires_at": 1749796418.6664612
+}

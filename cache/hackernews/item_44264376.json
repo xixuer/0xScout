@@ -1,0 +1,24 @@
+{
+  "data": {
+    "by": "Bogdanp",
+    "descendants": 27,
+    "id": 44264376,
+    "kids": [
+      44265835,
+      44265757,
+      44265005,
+      44264809,
+      44264836,
+      44265413,
+      44264917,
+      44265135
+    ],
+    "score": 83,
+    "time": 1749771720,
+    "title": "The Case for Software Craftsmanship in the Era of Vibes",
+    "type": "story",
+    "url": "https://zed.dev/blog/software-craftsmanship-in-the-era-of-vibes"
+  },
+  "created_at": 1749791411.9637003,
+  "expires_at": 1749795011.9637005
+}
